@@ -30,6 +30,7 @@
             $res = isset($_COOKIE["user"]);
             if($res != false):
         ?>
+            <button type="submit"><a href="form-php/exit.php">Выйти</a></button>
         <div><a href="form-php/form.php">Добавить операцию</a></div>
         <?php endif;?>
         <div>
@@ -96,6 +97,11 @@
             <?php
             for($j=0; $j<$i; $j++):
             ?>
+                <?php
+                $res = isset($_COOKIE["user"]);
+                if($res != false):
+                ?>
+
                 <tbody>
                     <td><?php echo $cartridg[$j]->date?></td>
                     <td><?php echo $cartridg[$j]->service?></td>
@@ -104,7 +110,22 @@
                     echo '<td width="100"><a href="form-php/edit_form.php?id='.$cartridg[$j]->id.'"><button>Редактировать</button></a></td>';
                     echo '<td width="100"><a href="form-php/delete_form.php?id='.$cartridg[$j]->id.'"><button>Удалить</button></a></td>' ?>
                 </tbody>
+                <?php endif;?>
+            <?php endfor;?>
 
+            <?php
+            for($j=0; $j<$i; $j++):
+                ?>
+                <?php
+                $res = isset($_COOKIE["user"]);
+                if($res == false):
+                ?>
+                    <tbody>
+                        <td><?php echo $cartridg[$j]->date?></td>
+                        <td><?php echo $cartridg[$j]->service?></td>
+                        <td><?php echo $cartridg[$j]->price?></td>
+                    </tbody>
+                <?php endif;?>
             <?php endfor;?>
 
 
