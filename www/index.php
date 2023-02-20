@@ -1,15 +1,8 @@
 <?php
-    spl_autoload_register(function ($class_name){
-        $class_name = str_replace('\\', DIRECTORY_SEPARATOR, $class_name);
-        require __DIR__ . '/src/' . $class_name . '.php';
-
-    });
-    use Cartridge\Cartridg;
-    use Request\Request;
-    $req = new Request();
-    if($req->getPost_key('barcode')!= false){
-        setcookie('barcode', $req->getPost_key('barcode'), time() + 3600, "/");
-    }
+require "autoloader.php";
+if($req->getPost_key('barcode')){
+    setcookie('barcode', $req->getPost_key('barcode'), time() + 3600, "/");
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -89,7 +82,7 @@
                 <th width="200px">Модель</th>
             </tr>
             <?php
-            if ($_POST):
+            if ($req->getPost_key('barcode') || $barcode):
             ?>
             <th width="200"><?php  echo $cartridg[0]->barcode;?></th>
             <th width="200"><?php  echo $cartridg[0]->model;?></th>
@@ -110,8 +103,7 @@
             for($j=0; $j<$i; $j++):
             ?>
                 <?php
-                $res = isset($_COOKIE["user"]);
-                if($res != false):
+                if($req->getCookie('user')):
                 ?>
 
                 <tbody>
@@ -129,8 +121,7 @@
             for($j=0; $j<$i; $j++):
                 ?>
                 <?php
-                $res = isset($_COOKIE["user"]);
-                if($res == false):
+                if($req->getCookie('user') == false):
                 ?>
                     <tbody>
                         <td><?php echo $cartridg[$j]->date?></td>

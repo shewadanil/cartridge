@@ -1,6 +1,7 @@
 <?php
-    $login = $_POST['login'];
-    $password = $_POST['password'];
+    require "../autoloader.php";
+    $login = $req->getPost_key('login');
+    $password = $req->getPost_key('password');
     include 'includ_db.php';
     $password = md5($password."adafaghha");
 

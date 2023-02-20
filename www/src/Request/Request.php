@@ -45,4 +45,11 @@ class Request
         return $default;
 
     }
+    public function getKey($key ,$default = null){
+        if(isset($this->get[$key])){
+            return $this->get[$key];
+        }
+        return $default;
+
+    }
 }
