@@ -1,3 +1,16 @@
+<?php
+    spl_autoload_register(function ($class_name){
+        $class_name = str_replace('\\', DIRECTORY_SEPARATOR, $class_name);
+        require __DIR__ . '/src/' . $class_name . '.php';
+
+    });
+    use Cartridge\Cartridg;
+    use Request\Request;
+    $req = new Request();
+    if($req->getPost_key('barcode')!= false){
+        setcookie('barcode', $req->getPost_key('barcode'), time() + 3600, "/");
+    }
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,14 +22,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<?php
-    spl_autoload_register(function ($class_name){
-        require __DIR__ . '/src/class/' . $class_name . '.php';
-    });
-?>
+
     <?php
-    $res = isset($_COOKIE["user"]);
-    if($res == false):
+    if($req->getCookie('user') == false):
     ?>
     <div>
         <form action="form-php/login.php" method="post">
@@ -27,8 +35,7 @@
     </div>
     <?php endif;?>
         <?php
-            $res = isset($_COOKIE["user"]);
-            if($res != false):
+            if($req->getCookie('user') != false):
         ?>
             <button type="submit"><a href="form-php/exit.php">Выйти</a></button>
         <div><a href="form-php/form.php">Добавить операцию</a></div>
@@ -42,29 +49,34 @@
         </div>
 
 <?php
+        if ($req->getCookie('barcode') == true){
+            $barcode = $req->valueCookie('barcode');
+        }
       $i = 0;
-        if($_POST){
-        require 'form-php/includ_db.php';
-        $barcode = $_POST['barcode'];
-        $result = $mysql->query("SELECT * FROM `cartridge` WHERE `barcode` = '$barcode'");
+        if($req->getPost_key('barcode') or $barcode){
+            require 'form-php/includ_db.php';
+                if ($req->getPost_key('barcode') != null){
+                    $barcode = $req->getPost_key('barcode');
+                }
+            $result = $mysql->query("SELECT * FROM `cartridge` WHERE `barcode` = '$barcode'");
 
-        if($result->num_rows == 0){
-            echo "Не найден штрихкод";
-            exit();
+            if($result->num_rows == 0){
+                    echo "Не найден штрихкод";
+                    exit();
+            }
+
+            while ($r = $result->fetch_assoc()){
+                $cartridg["$i"] = new Cartridge\Cartridg($r["id"], $r["model"], $r['barcode'], $r['service'], $r['price'], $r['date']);
+                $i++;
+            }
+
+            /*$r = $result->fetch_assoc();
+            print_r($r);
+            $cart = new Cartridge($r['id'], $r['model'], $r['barcode'], $r['service'], $r['price']);
+            $cart->print();*/
+
+            $mysql->close();
         }
-
-        while ($r = $result->fetch_assoc()){
-            $cartridg["$i"] = new Cartridg($r["id"], $r["model"], $r['barcode'], $r['service'], $r['price'], $r['date']);
-            $i++;
-        }
-
-        /*$r = $result->fetch_assoc();
-        print_r($r);
-        $cart = new Cartridge($r['id'], $r['model'], $r['barcode'], $r['service'], $r['price']);
-        $cart->print();*/
-
-        $mysql->close();
-    }
 
     ?>
 

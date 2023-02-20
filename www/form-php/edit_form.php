@@ -1,15 +1,16 @@
 <?php
-
-?>
-<?php
     spl_autoload_register(function ($class_name){
-        require __DIR__ . '../src/class/' . $class_name . '.php';
+        $class_name = str_replace('\\', DIRECTORY_SEPARATOR, $class_name);
+        require __DIR__ . '/src/' . $class_name . '.php';
+
     });
+    use Cartridge\Cartridg;
+
 ?>
 
 <?php
     $cartridg = NULL;
-    require '../src/class/Cartridg.php';
+    require '../src/Cartridge/Cartridg.php';
     require 'includ_db.php';
     $id = $_GET['id'];
     $result = $mysql->query("SELECT * FROM `cartridge` WHERE `id` = '$id'");
@@ -20,7 +21,7 @@
     }
 
     while ($r = $result->fetch_assoc()){
-        $cartridg = new Cartridg($r["id"], $r["model"], $r['barcode'], $r['service'], $r['price'], $r['date']);
+        $cartridg = new Cartridge\Cartridg($r["id"], $r["model"], $r['barcode'], $r['service'], $r['price'], $r['date']);
 
     }
 

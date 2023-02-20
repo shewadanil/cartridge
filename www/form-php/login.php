@@ -7,10 +7,15 @@
     $result = $mysql->query("SELECT * FROM `user` WHERE `login` = '$login' AND `password` = '$password'");
 
     if ($result->num_rows == 0){
-        echo 'Пользователь не найден';
+        echo 'Пользователь не найден <br>';
+        echo '<a href="../index.php">На главную</a>';
+        exit();
+
     }
     $user = $result->fetch_assoc();
-    setcookie("user", $user['login'], time() + 3600, "/");
+    if($result->num_rows) {
+        setcookie("user", $user['login'], time() + 3600, "/");
+    }
     $mysql->close();
     header('Location: ../index.php');
-
+?>
