@@ -1,5 +1,6 @@
 <?php
-namespace Cartridge;
+namespace App;
+
 class Cartridg
 {
     public $id;

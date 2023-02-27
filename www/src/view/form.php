@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <a href="../index.php">На Главную</a>
-    <form action="check.php" method="post">
+    <a href="../../index.php">На Главную</a>
+    <form action="../../form-php/check.php" method="post">
         <input type="text" name="model" id="model" placeholder="Модель"> <br>
         <input type="text" name="barcode" id="barcode" placeholder="Штрихкод"> <br>
         <input type="text" name="service" id="service" placeholder="Услуга"> <br>

@@ -8,4 +8,4 @@
     $mysql->query("INSERT INTO `cartridge` (`model`, `barcode`, `service`, `price`)
     VALUES ('$model', '$barcode', '$service', '$price')");
     $mysql->close();
-    header('Location: /index.php');
+    header('Location: /');
