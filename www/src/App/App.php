@@ -13,7 +13,7 @@ class App
         $this->request = $req;
     }
 
-    public function handle() {
+    public function handle() : Response{
         $controller  = $this->controllerFabric();
         if($controller != null){
             return $controller->handle();

@@ -31,7 +31,7 @@ class Request
 
     }
 
-    public function getPost_key($key, $default = null)
+    public function post($key, $default = null)
     {
         if (isset($this->post[$key])) {
             return $this->post[$key];

@@ -13,5 +13,8 @@ abstract class AbstractController {
     }
 
     public abstract function handle(): Response;
+    protected function successResponse(ViewInterface $view){
+        return new Response($view);
+    }
 
 }

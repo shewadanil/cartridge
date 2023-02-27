@@ -11,11 +11,11 @@ class Response
      */
     private array $headers;
     private int $status;
-    private string $output;
+    private ViewInterface $view;
 
-    public function __construct(string $output, int $code = 200)
+    public function __construct(ViewInterface $view, int $code = 200)
     {
-        $this->output = $output;
+        $this->view = $view;
         $this->status = $code;
         $this->headers = [];
     }
@@ -41,5 +41,16 @@ class Response
         }else{
             $this->headers[$key][] = $value;
         }
+    }
+    function generateResponse(){
+        http_response_code($this->status);
+        foreach ($this->headers as $name => $value){
+
+            foreach ($value as $key){
+                header("{$name}: {$key}", false);
+
+            }
+        }
+        echo $this->view->handle();
     }
 }
