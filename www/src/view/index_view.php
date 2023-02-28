@@ -1,18 +1,15 @@
 <?php
-include "index_view.php";
+include_once "html_header.php";
 
 ?>
 
 
 
-    <div>
-        <form action="form-php/login.php" method="post">
-            <input type="text" name="login" id="login" placeholder="Логин"><br>
-            <input type="text" name="password" id="password" placeholder="Пароль"><br>
-            <button type="submit">Войти</button>
-        </form>
-    </div>
 
+    <div>
+        <a href="login"><button>Войти</button></a>
+
+    </div>
     <button type="submit"><a href="form-php/exit.php">Выйти</a></button>
     <div><a href="view/form.php">Добавить операцию</a></div>
 
@@ -49,5 +46,5 @@ include "index_view.php";
 </div>
 
 <?php
-include "html_footer.php"
+include_once "html_footer.php"
 ?>

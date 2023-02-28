@@ -17,6 +17,9 @@ class App
         $controller  = $this->controllerFabric();
         if($controller != null){
             return $controller->handle();
+        }else {
+            $controller = $this->controller('error');
+            return $controller->handle();
         }
 
     }
@@ -44,12 +47,15 @@ class App
 
     }
 
+
     protected function controller(string $type) : AbstractController {
         switch($type) {
             case 'main':
                 return new MainController($this->request);
             case 'login':
                 return new LoginController($this->request);
+            case 'error':
+                return new ErrorController($this->request);
         }
     }
 
