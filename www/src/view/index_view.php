@@ -10,8 +10,8 @@ include_once "html_header.php";
         <a href="login"><button>Войти</button></a>
 
     </div>
-    <button type="submit"><a href="form-php/exit.php">Выйти</a></button>
-    <div><a href="view/form.php">Добавить операцию</a></div>
+    <a href="exit"><button type="submit">Выйти</button></a>
+    <div><a href="">Добавить операцию</a></div>
 
 <div>
     <form action="" method="post">
