@@ -20,6 +20,10 @@
     $mysql->close();
     header('Location: /');*/
 ?>
+<?php
+include_once "html_header.php";
+
+?>
 <div>
     <form action="" method="post">
         <input type="text" name="login" id="login" placeholder="Логин"><br>
@@ -27,3 +31,6 @@
         <button type="submit">Войти</button>
     </form>
 </div>
+<?php
+include_once "html_footer.php"
+?>

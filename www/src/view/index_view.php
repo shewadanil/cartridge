@@ -8,10 +8,14 @@ include_once "html_header.php";
 
     <div>
         <a href="login"><button>Войти</button></a>
-
     </div>
-    <a href="exit"><button type="submit">Выйти</button></a>
-    <div><a href="">Добавить операцию</a></div>
+    <div>
+        <a href="exit"><button type="submit">Выйти</button></a>
+    </div>
+
+    <div>
+        <a href="new_record">Добавить операцию</a>
+    </div>
 
 <div>
     <form action="" method="post">

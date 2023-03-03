@@ -5,7 +5,7 @@ namespace App;
 
 
 class View implements ViewInterface
-{   private $name;
+{   private string $name;
     public function __construct(string $name){
         $this->name = $name;
 

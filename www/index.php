@@ -4,7 +4,6 @@ require "autoloader.php";
 
 use App\App;
 use App\Request;
-use App\Cartridg;
 $req = new Request();
 $app = new App($req);
 $response = $app->handle();

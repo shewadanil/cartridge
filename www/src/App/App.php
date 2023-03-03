@@ -3,7 +3,6 @@
 
 namespace App;
 use App\AbstractController;
-use App\MainController;
 
 class App
 {
@@ -28,8 +27,8 @@ class App
         if($this->request->getUri() === '/') {
             return $this->controller('main');
         }
-        if($this->request->getUri() === '/cartrige' && $this->request->getMethod() === 'GET') {
-            return $this->controller('get_cartrige');
+        if($this->request->getUri() === '/new_record' && $this->request->getMethod() === 'GET') {
+            return $this->controller('new_record');
         }
         if($this->request->getUri() === '/cartrige' && $this->request->getMethod() === 'POST') {
             return $this->controller('create_cartrige');
@@ -40,7 +39,7 @@ class App
         if($this->request->getUri() === '/cartrige' && $this->request->getMethod() === 'DELETE') {
             return $this->controller('delete_cartrige');
         }
-        if($this->request->getUri() === '/login') {
+        if($this->request->getUri() === '/login' && $this->request->getMethod() === 'GET') {
             return $this->controller('login');
         }
             return null;
@@ -56,8 +55,12 @@ class App
                 return new LoginController($this->request);
             case 'error':
                 return new ErrorController($this->request);
+            case 'new_record':
+                return new RecordController($this->request);
         }
     }
+
+
 
 
 }

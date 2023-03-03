@@ -1,6 +1,6 @@
 <?php
-    require "../autoloader.php";
-    require 'includ_db.php';
+
+    $mysql = new mysqli('database','Danil','1209vzQla','docker');
     $model = $req->post('model');
     $barcode = $req->post('barcode');
     $service = $req->post('service');
@@ -8,4 +8,3 @@
     $mysql->query("INSERT INTO `cartridge` (`model`, `barcode`, `service`, `price`)
     VALUES ('$model', '$barcode', '$service', '$price')");
     $mysql->close();
-    header('Location: /');
