@@ -5,9 +5,10 @@ namespace App;
 
 
 class View implements ViewInterface
-{   private string $name;
-    public function __construct(string $name){
-        $this->name = $name;
+{   private string $address;
+    public function __construct(string $address, array $ar = []){
+        $this->address = $address;
+        extract($ar);
 
     }
     function handle(): string

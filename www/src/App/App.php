@@ -17,8 +17,7 @@ class App
         if($controller != null){
             return $controller->handle();
         }else {
-            $controller = $this->controller('error');
-            return $controller->handle();
+            return new Response(new View('error/not_found'), 404);
         }
 
     }
