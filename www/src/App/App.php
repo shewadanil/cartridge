@@ -13,12 +13,18 @@ class App
     }
 
     public function handle() : Response{
-        $controller  = $this->controllerFabric();
-        if($controller != null){
-            return $controller->handle();
-        }else {
-            return new Response(new View('error/not_found'), 404);
+        try {
+            $controller  = $this->controllerFabric();
+            if($controller != null){
+                return $controller->handle();
+            }else {
+                return new Response(new View('error/not_found'), 404);
+            }
+
+        }catch (\Exception $exception){
+            return new Response(new View('error/exception', ['exception' => $exception]), 500);
         }
+
 
     }
 
@@ -52,12 +58,11 @@ class App
                 return new MainController($this->request);
             case 'login':
                 return new LoginController($this->request);
-            case 'error':
-                return new ErrorController($this->request);
             case 'new_record':
                 return new RecordController($this->request);
         }
     }
+
 
 
 

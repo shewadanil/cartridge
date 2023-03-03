@@ -35,6 +35,10 @@ class Response
     {
         $this->status = $status;
     }
+    public function getStatus() : int
+    {
+        return $this->status;
+    }
     public function setHeader($key, $value){
         if (!isset($this->headers[$key])){
             $this->headers[$key] = [$value];
@@ -52,5 +56,7 @@ class Response
             }
         }
         echo $this->view->handle();
+
+
     }
 }
