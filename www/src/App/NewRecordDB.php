@@ -14,7 +14,6 @@ class NewRecordDB
         $this->request = $req;
     }
     public function insert (){
-        $this->mysql = new mysqli('database','Danil','1209vzQla','docker');
         $model = $this->request->post('model');
         $barcode = $this->request->post('barcode');
         $service = $this->request->post('service');

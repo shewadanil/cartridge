@@ -3,7 +3,6 @@
 
 namespace App;
 use App\AbstractController;
-
 class App
 {
     private Request $request;
@@ -33,10 +32,10 @@ class App
             return $this->controller('main');
         }
         if($this->request->getUri() === '/new_record' && $this->request->getMethod() === 'GET') {
-            return $this->controller('new_record');
+            return $this->controller('create_cartridge');
         }
-        if($this->request->getUri() === '/cartrige' && $this->request->getMethod() === 'POST') {
-            return $this->controller('create_cartrige');
+        if($this->request->getUri() === '/db' && $this->request->getMethod() === 'POST') {
+            return $this->controller('');
         }
         if($this->request->getUri() === '/cartrige' && $this->request->getMethod() === 'PUT') {
             return $this->controller('edit_cartirige');
@@ -52,19 +51,17 @@ class App
     }
 
 
-    protected function controller(string $type) : AbstractController {
+    protected function controller(string $type) : ?AbstractController {
         switch($type) {
             case 'main':
                 return new MainController($this->request);
             case 'login':
                 return new LoginController($this->request);
-            case 'new_record':
+            case 'create_cartridge':
                 return new RecordController($this->request);
         }
+        return null;
     }
-
-
-
 
 
 }
