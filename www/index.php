@@ -11,7 +11,7 @@ $app = new App($req);
 $response = $app->handle();
 $response->generateResponse();
 $db = new ConnectDb();
-ScanClass::classScan();
+print_r(ScanClass::classScan());
 
 
 

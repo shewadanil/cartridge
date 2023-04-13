@@ -16,13 +16,12 @@ class ScanClass
        foreach ($dir as &$value){
            $reg = preg_replace('/\..+$/u', '', $value);
            $value = $reg;
-           $reg = preg_replace('/\./', '', $value);
-           $value = $reg;
+           $value = "App\\" . $value;
 
        }
         print_r($dir);
        foreach ($dir as $classname){
-           $class = new \ReflectionClass("App/" . $classname);
+           $class = new \ReflectionClass($classname);
            foreach ($class->getAttributes() as $value){
                ScanClass::$arrayargument['class'][] = $value->getArguments();
 
