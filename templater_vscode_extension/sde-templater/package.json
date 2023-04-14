@@ -1,0 +1,25 @@
+{
+  "name": "sde-templater",
+  "displayName": "sde_templater",
+  "description": "custom sde-templater for php",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "sde-templater",
+      "aliases": ["sde-templater", "sde-templater"],
+      "extensions": [".sde"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "sde-templater",
+      "scopeName": "source.sde",
+      "path": "./syntaxes/sde-templater.tmLanguage.json"
+    }]
+  }
+}
