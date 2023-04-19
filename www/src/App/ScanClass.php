@@ -10,6 +10,7 @@ class ScanClass
 {
     static public array $arrayargument;
     static public array $arrayamethod;
+    static public array $arrayaproperties;
 
     static function classScan(){
         $dir = scandir("src" . DIRECTORY_SEPARATOR . "App");
@@ -25,44 +26,23 @@ class ScanClass
            $class = new \ReflectionClass($classname);
            foreach ($class->getAttributes() as $value){
                foreach ($value->getArguments() as $result){
-                   ScanClass::$arrayargument[$classname]['class'][] = $result;
-                   foreach ($class->getMethods() as $method){
-                       foreach ($method->getAttributes() as $methodValue){
-                           foreach ($methodValue->getArguments() as $methodResult){
-                               ScanClass::$arrayargument[$classname]['method'][] = $methodResult;
-                           }
-                           /*ScanClass::$arrayargument[$classname]['method'] = $value->getArguments();*/
-                       }
-                   }
-                   foreach ($class->getProperties() as $properties){
-                       foreach ($properties->getAttributes() as $propertiesValue){
-                           foreach ($propertiesValue->getArguments() as $propertiesResult){
-                               ScanClass::$arrayargument[$classname]['properties'][] = $propertiesResult;
-                           }
-                          /* ScanClass::$arrayargument[] = $value->getArguments();*/
-                       }
-                   }
+                   ScanClass::$arrayargument[] = $result;
                }
-               /*ScanClass::$arrayargument = $value->getArguments();*/
            }
-
-           /*foreach ($class->getMethods() as $method){
-               foreach ($method->getAttributes() as $value){
-                   foreach ($value->getArguments() as $result){
-                       ScanClass::$arrayargument[] = $result;
+           foreach ($class->getMethods() as $method){
+               foreach ($method->getAttributes() as $methodValue){
+                   foreach ($methodValue->getArguments() as $methodResult){
+                       ScanClass::$arrayamethod[$classname][] = $methodResult;
                    }
-
-                   ScanClass::$arrayargument[$classname]['method'] = $value->getArguments();
                }
-           }*/
-           /*foreach ($class->getProperties() as $properties){
-               foreach ($properties->getAttributes() as $value){
-                   foreach ($value->getArguments() as $result){
-                       ScanClass::$arrayargument[$classname]['properties'] = $result;
+           }
+           foreach ($class->getProperties() as $properties){
+               foreach ($properties->getAttributes() as $propertiesValue){
+                   foreach ($propertiesValue->getArguments() as $propertiesResult){
+                       ScanClass::$arrayaproperties[$classname][] = $propertiesResult;
                    }
-                   ScanClass::$arrayargument[] = $value->getArguments();
                }
-           }*/
+           }
        }
 
 

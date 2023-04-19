@@ -11,13 +11,10 @@ $app = new App($req);
 $response = $app->handle();
 $response->generateResponse();
 $db = new ConnectDb();
-$ar = ScanClass::classScan();
-/*print_r($ar);*/
-foreach ($ar as $value){
-    foreach ($value as $value1){
-        print_r($value1);
-    }
-}
+ScanClass::classScan();
+print_r(ScanClass::$arrayargument);
+print_r(ScanClass::$arrayamethod);
+print_r(ScanClass::$arrayaproperties);
 
 
 
