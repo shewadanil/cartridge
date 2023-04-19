@@ -11,7 +11,14 @@ $app = new App($req);
 $response = $app->handle();
 $response->generateResponse();
 $db = new ConnectDb();
-print_r(ScanClass::classScan());
+$ar = ScanClass::classScan();
+/*print_r($ar);*/
+foreach ($ar as $value){
+    foreach ($value as $value1){
+        print_r($value1);
+    }
+}
+
 
 
 

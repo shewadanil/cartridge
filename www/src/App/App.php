@@ -2,11 +2,14 @@
 
 
 namespace App;
+use Attribute\Method;
+use Attribute\Table;
 use App\AbstractController;
+#[Table('App')]
 class App
 {
     private Request $request;
-
+    #[Method('appConstract')]
     public function __construct(Request $req) {
         $this->request = $req;
     }
@@ -26,7 +29,7 @@ class App
 
 
     }
-
+    #[Method('appController')]
     protected function controllerFabric() : ?AbstractController {
         if($this->request->getUri() === '/') {
             return $this->controller('main');

@@ -2,14 +2,21 @@
 namespace App;
 use Attribute\Table;
 use Attribute\Method;
+use Attribute\Properties;
 #[Table("cartridge")]
 class Cartridg
 {
+    #[Properties("id")]
     public int $id;
+    #[Properties("model")]
     public string $model;
+    #[Properties("barcode")]
     public int $barcode;
+    #[Properties("service")]
     public string $service;
+    #[Properties("price")]
     public int $price;
+    #[Properties("date")]
     public $date;
     #[Method("constract")]
     function __construct($id, $model, $barcode, $service, $price, $date)
