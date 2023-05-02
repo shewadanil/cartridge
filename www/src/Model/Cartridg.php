@@ -1,5 +1,5 @@
 <?php
-namespace App;
+namespace Model;
 use Attribute\Table;
 use Attribute\Method;
 use Attribute\Properties;
@@ -18,7 +18,7 @@ class Cartridg
     public int $price;
     #[Properties("date")]
     public $date;
-    #[Method("constract")]
+
     function __construct($id, $model, $barcode, $service, $price, $date)
     {
         $this->id = $id;

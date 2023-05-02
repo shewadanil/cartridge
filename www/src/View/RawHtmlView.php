@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App;
+namespace View;
 
 
 class RawHtmlView implements ViewInterface

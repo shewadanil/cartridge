@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App;
+namespace View;
 
 
 class View implements ViewInterface
@@ -21,6 +21,6 @@ class View implements ViewInterface
     }
     private function extract(){
         extract($this->ar);
-        include 'src/view/' . $this->address . '.php';
+        include 'Templates' . DIRECTORY_SEPARATOR . $this->address . '.php';
     }
 }

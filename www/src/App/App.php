@@ -2,14 +2,14 @@
 
 
 namespace App;
+use Controller\AbstractController;
 use Attribute\Method;
 use Attribute\Table;
-use App\AbstractController;
+use View\View;
 #[Table('App')]
 class App
 {
     private Request $request;
-    #[Method('appConstract')]
     public function __construct(Request $req) {
         $this->request = $req;
     }
@@ -29,7 +29,6 @@ class App
 
 
     }
-    #[Method('appController')]
     protected function controllerFabric() : ?AbstractController {
         if($this->request->getUri() === '/') {
             return $this->controller('main');
@@ -57,11 +56,11 @@ class App
     protected function controller(string $type) : ?AbstractController {
         switch($type) {
             case 'main':
-                return new MainController($this->request);
+                return new \Controller\MainController($this->request);
             case 'login':
-                return new LoginController($this->request);
+                return new \Controller\LoginController($this->request);
             case 'create_cartridge':
-                return new RecordController($this->request);
+                return new \Controller\RecordController($this->request);
         }
         return null;
     }

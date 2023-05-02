@@ -10,12 +10,9 @@ $req = new Request();
 $app = new App($req);
 $response = $app->handle();
 $response->generateResponse();
-$db = new ConnectDb();
-ScanClass::classScan();
-print_r(ScanClass::$arrayargument);
-print_r(ScanClass::$arrayamethod);
+ScanClass::classScan("src");
 print_r(ScanClass::$arrayaproperties);
-
+print_r(ScanClass::$arrayargument);
 
 
 

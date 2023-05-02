@@ -1,8 +1,10 @@
 <?php
 
 
-namespace App;
+namespace Controller;
 use App\Request;
+use App\Response;
+use View\ViewInterface;
 
 
 abstract class AbstractController {

@@ -2,7 +2,7 @@
 
 
 namespace App;
-
+use View\ViewInterface;
 
 class Response
 {

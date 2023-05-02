@@ -1,8 +1,9 @@
 <?php
 
 
-namespace App;
-
+namespace Controller;
+use View\View;
+use App\Response;
 
 class LoginController extends AbstractController
 {

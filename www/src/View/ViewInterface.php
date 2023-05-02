@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App;
+namespace View;
 
 
 interface ViewInterface
