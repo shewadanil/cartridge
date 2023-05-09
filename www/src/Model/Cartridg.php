@@ -1,8 +1,10 @@
 <?php
-namespace Model;
-use Attribute\Table;
-use Attribute\Method;
-use Attribute\Properties;
+namespace App\Model;
+use App\Attribute\Table;
+use App\Attribute\Method;
+use App\Attribute\Properties;
+
+
 #[Table("cartridge")]
 class Cartridg
 {

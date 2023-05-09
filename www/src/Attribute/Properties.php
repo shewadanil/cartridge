@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Attribute;
+namespace App\Attribute;
 
 #[\Attribute]
 class Properties

@@ -2,16 +2,17 @@
 
 
 namespace App;
-use View\ViewInterface;
+use App\View\ViewInterface;
 
 class Response
 {
     /**
-     * @var string[]
+     * @var Array<Array<string>>
      */
     private array $headers;
     private int $status;
     private ViewInterface $view;
+    private string $output;
 
     public function __construct(ViewInterface $view, int $code = 200)
     {

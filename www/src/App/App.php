@@ -2,11 +2,11 @@
 
 
 namespace App;
-use Controller\AbstractController;
-use Attribute\Method;
-use Attribute\Table;
-use View\View;
-#[Table('App')]
+use App\Controller\AbstractController;
+use App\Attribute\Method;
+use App\Attribute\Table;
+use App\View\View;
+
 class App
 {
     private Request $request;
@@ -56,11 +56,11 @@ class App
     protected function controller(string $type) : ?AbstractController {
         switch($type) {
             case 'main':
-                return new \Controller\MainController($this->request);
+                return new \App\Controller\MainController($this->request);
             case 'login':
-                return new \Controller\LoginController($this->request);
+                return new \App\Controller\LoginController($this->request);
             case 'create_cartridge':
-                return new \Controller\RecordController($this->request);
+                return new \App\Controller\RecordController($this->request);
         }
         return null;
     }

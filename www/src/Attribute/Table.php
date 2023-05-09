@@ -1,8 +1,8 @@
 <?php
 
 
-namespace Attribute;
-use \Attribute;
+namespace App\Attribute;
+
 #[\Attribute]
 class Table
 {
