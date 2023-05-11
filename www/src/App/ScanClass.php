@@ -38,7 +38,7 @@ class ScanClass
         return $dir;
     }
 
-    public function classScan(){
+    private function classScan(){
         $this->scanDirectory($this->dir);
         foreach ($this->array_full as &$value){
             $reg = str_replace('.php', '', $value);
@@ -78,6 +78,7 @@ class ScanClass
         return $this->arrayamethod;
     }
     public function getAttribute () : array {
+        $this->classScan();
         return $this->arrayargument;
     }
 
