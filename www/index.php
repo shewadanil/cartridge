@@ -10,11 +10,9 @@ $req = new Request();
 $app = new App($req);
 $response = $app->handle();
 $response->generateResponse();
-ScanClass::classScan("src");
-print_r(ScanClass::$arrayaproperties);
-print_r(ScanClass::$arrayargument);
-
-
+$scan = new ScanClass("src");
+$scan->classScan();
+print_r($scan->getAttribute());
 
 /*var_dump($_SERVER['REQUEST_URI']);
 var_dump(parse_url($_SERVER['REQUEST_URI']));

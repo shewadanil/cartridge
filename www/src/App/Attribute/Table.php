@@ -4,8 +4,7 @@
 namespace App\Attribute;
 
 #[\Attribute]
-class Properties
+class Table
 {
     public function __construct(string $name) {}
-
 }

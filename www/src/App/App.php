@@ -3,8 +3,6 @@
 
 namespace App;
 use App\Controller\AbstractController;
-use App\Attribute\Method;
-use App\Attribute\Table;
 use App\View\View;
 
 class App

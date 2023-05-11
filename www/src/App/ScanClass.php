@@ -8,11 +8,15 @@ use ReflectionAttribute;
 
 class ScanClass
 {
-    static public array $arrayargument;
-    static public array $arrayamethod;
-    static public array $arrayaproperties;
-    static public array $array_full;
-    static function scanDirectory($nameDirectory) : array {
+    private array $arrayargument;
+    private array $arrayamethod;
+    private array $arrayaproperties;
+    private array $array_full;
+    private string $dir;
+    public function __construct($dir){
+        $this->dir = $dir;
+    }
+    private function scanDirectory($nameDirectory) : array {
         $dir = scandir($nameDirectory);
         foreach ($dir as $key => $value){
             if($value == "." || $value == ".."){
@@ -23,58 +27,58 @@ class ScanClass
         foreach ($dir as &$value) {
             $flag = is_dir($nameDirectory . DIRECTORY_SEPARATOR . $value);
             if ($flag) {
-               ScanClass::scanDirectory($nameDirectory . DIRECTORY_SEPARATOR .$value);
+                $this->scanDirectory($nameDirectory . DIRECTORY_SEPARATOR .$value);
             }
             $value = $nameDirectory . DIRECTORY_SEPARATOR . $value;
             if(!$flag){
-                ScanClass::$array_full[] = $value;
+                $this->array_full[] = $value;
             }
         }
 
         return $dir;
-
     }
 
-    static function classScan($nameDirectory){
-        ScanClass::scanDirectory($nameDirectory);
-        $dir = ScanClass::$array_full;
-
-        foreach ($dir as &$value){
+    public function classScan(){
+        $this->scanDirectory($this->dir);
+        foreach ($this->array_full as &$value){
             $reg = str_replace('.php', '', $value);
             $value = $reg;
-            $reg = str_replace($nameDirectory . DIRECTORY_SEPARATOR, '', $value);
+            $reg = str_replace($this->dir . DIRECTORY_SEPARATOR, '', $value);
             $value = $reg;
             $reg = str_replace('/', "\\", $value);
             $value = $reg;
-
-
         }
-       foreach ($dir as $classname){
+       foreach ($this->array_full as $classname){
            $class = new \ReflectionClass($classname);
            foreach ($class->getAttributes() as $value){
                foreach ($value->getArguments() as $result){
-                   ScanClass::$arrayargument[] = $result;
+                   $this->arrayargument[] = $result;
                }
            }
-           foreach ($class->getMethods() as $method){
+           /*foreach ($class->getMethods() as $method){
                foreach ($method->getAttributes() as $methodValue){
                    foreach ($methodValue->getArguments() as $methodResult){
-                       ScanClass::$arrayamethod[$classname][] = $methodResult;
+                       $this->arrayamethod[$classname][] = $methodResult;
                    }
                }
            }
            foreach ($class->getProperties() as $properties){
                foreach ($properties->getAttributes() as $propertiesValue){
                    foreach ($propertiesValue->getArguments() as $propertiesResult){
-                       ScanClass::$arrayaproperties[$classname][] = $propertiesResult;
+                       $this->arrayaproperties[$classname][] = $propertiesResult;
                    }
                }
-           }
+           }*/
        }
-
-
-
-
+    }
+    public function getProperties () : array {
+        return $this->arrayaproperties;
+    }
+    public function getMethod () : array {
+        return $this->arrayamethod;
+    }
+    public function getAttribute () : array {
+        return $this->arrayargument;
     }
 
 

@@ -4,7 +4,8 @@
 namespace App\Controller;
 use App\View\View;
 use App\Response;
-
+use App\Attribute\Controller;
+#[Controller(LoginController::class)]
 class LoginController extends AbstractController
 {
 

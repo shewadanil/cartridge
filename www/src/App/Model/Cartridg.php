@@ -5,7 +5,7 @@ use App\Attribute\Method;
 use App\Attribute\Properties;
 
 
-#[Table("cartridge")]
+#[Table(Cartridg::class)]
 class Cartridg
 {
     #[Properties("id")]
