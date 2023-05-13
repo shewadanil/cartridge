@@ -37,9 +37,7 @@ class ScanClass
 
         return $dir;
     }
-
-    private function classScan(){
-        $this->scanDirectory($this->dir);
+    private function sorted(){
         foreach ($this->array_full as &$value){
             $reg = str_replace('.php', '', $value);
             $value = $reg;
@@ -48,6 +46,11 @@ class ScanClass
             $reg = str_replace('/', "\\", $value);
             $value = $reg;
         }
+    }
+
+    private function FindClassByAttribute(){
+        $this->scanDirectory($this->dir);
+        $this->sorted();
        foreach ($this->array_full as $classname){
            $class = new \ReflectionClass($classname);
            foreach ($class->getAttributes() as $value){
@@ -55,30 +58,49 @@ class ScanClass
                    $this->arrayargument[] = $result;
                }
            }
-           /*foreach ($class->getMethods() as $method){
-               foreach ($method->getAttributes() as $methodValue){
-                   foreach ($methodValue->getArguments() as $methodResult){
-                       $this->arrayamethod[$classname][] = $methodResult;
-                   }
-               }
-           }
-           foreach ($class->getProperties() as $properties){
-               foreach ($properties->getAttributes() as $propertiesValue){
-                   foreach ($propertiesValue->getArguments() as $propertiesResult){
-                       $this->arrayaproperties[$classname][] = $propertiesResult;
-                   }
-               }
-           }*/
        }
     }
+    private function FindMethodsByAttribute()
+    {
+        $this->scanDirectory($this->dir);
+        $this->sorted();
+        foreach ($this->array_full as $classname){
+            $class = new \ReflectionClass($classname);
+            foreach ($class->getMethods() as $method){
+                foreach ($method->getAttributes() as $methodValue){
+                    foreach ($methodValue->getArguments() as $methodResult){
+                        $this->arrayamethod[$classname][] = $methodResult;
+                    }
+                }
+            }
+        }
+
+    }
+    private function FindPropertiesByAttribute()
+    {
+        $this->scanDirectory($this->dir);
+        $this->sorted();
+        foreach ($this->array_full as $classname) {
+            $class = new \ReflectionClass($classname);
+            foreach ($class->getProperties() as $properties){
+                foreach ($properties->getAttributes() as $propertiesValue){
+                    foreach ($propertiesValue->getArguments() as $propertiesResult){
+                        $this->arrayaproperties[$classname][] = $propertiesResult;
+                    }
+                }
+            }
+        }
+    }
     public function getProperties () : array {
+        $this->FindPropertiesByAttribute();
         return $this->arrayaproperties;
     }
     public function getMethod () : array {
+        $this->FindMethodsByAttribute();
         return $this->arrayamethod;
     }
     public function getAttribute () : array {
-        $this->classScan();
+        $this->FindClassByAttribute();
         return $this->arrayargument;
     }
 
