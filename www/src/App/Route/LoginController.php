@@ -1,11 +1,11 @@
 <?php
 
 
-namespace App\Controller;
+namespace App\Route;
 use App\View\View;
 use App\Response;
-use App\Attribute\Controller;
-#[Controller(LoginController::class)]
+use App\Attribute\Route;
+#[Route(LoginController::class)]
 class LoginController extends AbstractController
 {
 

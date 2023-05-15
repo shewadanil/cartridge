@@ -15,6 +15,10 @@ class ScanClass
     private string $dir;
     public function __construct($dir){
         $this->dir = $dir;
+        $this->scanDirectory($dir);
+        $this->MethodsAttribute();
+        $this->ClassAttribute();
+        $this->PropertiesAttribute();
     }
     private function scanDirectory($nameDirectory) : array {
         $dir = scandir($nameDirectory);
@@ -34,7 +38,7 @@ class ScanClass
                 $this->array_full[] = $value;
             }
         }
-
+        $this->sorted();
         return $dir;
     }
     private function sorted(){
@@ -48,22 +52,18 @@ class ScanClass
         }
     }
 
-    private function FindClassByAttribute(){
-        $this->scanDirectory($this->dir);
-        $this->sorted();
+    private function ClassAttribute(){
        foreach ($this->array_full as $classname){
            $class = new \ReflectionClass($classname);
            foreach ($class->getAttributes() as $value){
                foreach ($value->getArguments() as $result){
-                   $this->arrayargument[] = $result;
+                   $this->arrayargument[$value->getName()][] = $result;
                }
            }
        }
     }
-    private function FindMethodsByAttribute()
+    private function MethodsAttribute()
     {
-        $this->scanDirectory($this->dir);
-        $this->sorted();
         foreach ($this->array_full as $classname){
             $class = new \ReflectionClass($classname);
             foreach ($class->getMethods() as $method){
@@ -76,10 +76,8 @@ class ScanClass
         }
 
     }
-    private function FindPropertiesByAttribute()
+    private function PropertiesAttribute()
     {
-        $this->scanDirectory($this->dir);
-        $this->sorted();
         foreach ($this->array_full as $classname) {
             $class = new \ReflectionClass($classname);
             foreach ($class->getProperties() as $properties){
@@ -91,18 +89,34 @@ class ScanClass
             }
         }
     }
+    public function findClassByAttribute ($nameAttribute) : array {
+        $array = [];
+        foreach ($this->arrayargument as $name => $value){
+                if ($name === $nameAttribute){
+                    foreach ($value as $result) {
+                        $array[] = $result;
+                    }
+                }
+        }
+        return $array;
+    }
+    public function findMethodByAttribute ($nameAttribute) : array {
+        $array = [];
+        foreach ($this->arrayamethod as $name => $value){
+            if ($name === $nameAttribute){
+                foreach ($value as $result) {
+                    $array[] = $result;
+                }
+            }
+        }
+        return $array;
+    }
     public function getProperties () : array {
-        $this->FindPropertiesByAttribute();
+
         return $this->arrayaproperties;
     }
-    public function getMethod () : array {
-        $this->FindMethodsByAttribute();
-        return $this->arrayamethod;
-    }
-    public function getAttribute () : array {
-        $this->FindClassByAttribute();
-        return $this->arrayargument;
-    }
+
+
 
 
 }

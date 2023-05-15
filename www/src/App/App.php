@@ -2,14 +2,15 @@
 
 
 namespace App;
-use App\Controller\AbstractController;
+use App\Attribute\Route;
+use App\Route\AbstractController;
 use App\View\View;
 
 class App
 {
     private Request $request;
     private ScanClass $scanClass;
-
+    public $route;
 
     public function __construct(Request $req) {
         $this->request = $req;
@@ -19,7 +20,8 @@ class App
         try {
             $controller  = $this->controllerFabric();
             if($controller != null){
-                return $controller->handle();
+                $rou  = $this->route;
+                return $controller->$rou();
             }else {
                 return new Response(new View('error/not_found'), 404);
             }
@@ -32,10 +34,10 @@ class App
     }
     protected function controllerFabric() : ?AbstractController {
         if($this->request->getUri() === '/') {
-            return $this->controller('App\Controller\MainController');
+            return $this->controller('main');
         }
         if($this->request->getUri() === '/new_record' && $this->request->getMethod() === 'GET') {
-            return $this->controller('App\Controller\RecordController');
+            return $this->controller('record');
         }
         if($this->request->getUri() === '/db' && $this->request->getMethod() === 'POST') {
             return $this->controller('');
@@ -47,7 +49,7 @@ class App
             return $this->controller('delete_cartrige');
         }
         if($this->request->getUri() === '/login' && $this->request->getMethod() === 'GET') {
-            return $this->controller('App\Controller\LoginController');
+            return $this->controller('login');
         }
             return null;
 
@@ -55,11 +57,17 @@ class App
 
 
     protected function controller(string $type) : ?AbstractController {
-        $attr = $this->scanClass->getAttribute();
-        foreach ($attr as $value){
-            if ($value === $type){
-                return new $value($this->request);
-            }
+        $classattr = $this->scanClass->findClassByAttribute("App\Attribute\Route");
+       foreach ($classattr as $value){
+           $methodatr = $this->scanClass->findMethodByAttribute($value);
+           foreach ($methodatr as $result){
+               if ($result === $type){
+                   print_r($result);
+                   $this->route = $result;
+                   return new $value($this->request);
+               }
+           }
+
         }
        /* switch($type) {
             case 'main':

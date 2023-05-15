@@ -4,7 +4,7 @@
 namespace App\Attribute;
 
 #[\Attribute]
-class Controller
+class Route
 {
     public function __construct($name){}
 }

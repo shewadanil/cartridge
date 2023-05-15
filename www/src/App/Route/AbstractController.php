@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Controller;
+namespace App\Route;
 use App\Request;
 use App\Response;
 use App\View\ViewInterface;
@@ -14,7 +14,7 @@ abstract class AbstractController {
         $this->request = $request;
     }
 
-    public abstract function handle(): Response;
+    /*public abstract function handle(): Response;*/
     protected function successResponse(ViewInterface $view){
         return new Response($view);
     }

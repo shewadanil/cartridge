@@ -1,11 +1,11 @@
 <?php
 
 
-namespace App\Controller;
+namespace App\Route;
 use App\View\View;
 use App\Response;
-use App\Attribute\Controller;
-#[Controller(RecordController::class)]
+use App\Attribute\Route;
+#[Route(RecordController::class)]
 class RecordController extends AbstractController
 {
 
