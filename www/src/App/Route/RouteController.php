@@ -12,7 +12,8 @@ class RouteController extends AbstractController
     #[Route("main")]
     public function main(): Response
     {
-        $response = $this->successResponse(new View("index_view"));
+        $result = $this->db->query('SELECT * FROM `cartridge`;',[],"Cartridge");
+        $response = $this->successResponse(new View("index_view", ['results'=>$result]));
         return $response;
     }
     #[Route("login")]
@@ -24,7 +25,8 @@ class RouteController extends AbstractController
     #[Route("record")]
     public function record(): Response
     {
-        $response = $this->successResponse(new View("new_record"));
+
+        $response = $this->successResponse(new View("new_record_cartridge"));
         return $response;
     }
 }

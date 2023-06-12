@@ -20,7 +20,7 @@ class App
         try {
             $controller  = $this->controllerFabric();
             if($controller != null){
-                $rou  = $this->route;
+                $rou = $this->route;
                 return $controller->$rou();
             }else {
                 return new Response(new View('error/not_found'), 404);
@@ -62,7 +62,7 @@ class App
            $methodatr = $this->scanClass->findMethodByAttribute($value);
            foreach ($methodatr as $result){
                if ($result === $type){
-                   print_r($result);
+                   /*print_r($result);*/
                    $this->route = $result;
                    return new $value($this->request);
                }

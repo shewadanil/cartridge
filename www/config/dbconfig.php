@@ -1,8 +1,8 @@
 <?php
 return[
-  'hostname'=>'database',
-    'username' => 'Danil',
-    'password' => '1209vzQla',
-    'database' => 'docker'
+  'host'=>'database',
+    'user' => 'Danil',
+    'pass' => '1209vzQla',
+    'dbname' => 'docker'
 ];
 

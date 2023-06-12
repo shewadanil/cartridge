@@ -111,7 +111,7 @@ class ScanClass
         }
         return $array;
     }
-    public function getProperties () : array {
+    public function getPropertiesAttribute () : array {
 
         return $this->arrayaproperties;
     }

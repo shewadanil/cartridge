@@ -2,10 +2,6 @@
 include_once "html_header.php";
 
 ?>
-
-
-
-
     <div>
         <a href="login"><button>Войти</button></a>
     </div>
@@ -32,9 +28,18 @@ include_once "html_header.php";
         <tr>
 
             <th width="200px">Штрихкод</th>
+
             <th width="200px">Модель</th>
         </tr>
+        <?php foreach ($results as $result):?>
+        <tr>
+            <th width="200px"><?php echo $result['barcode']?></th>
+            <th width="200px"><?php echo $result['model']?></th>
+        </tr>
+        <?php endforeach;?>
 
+
+        </thead>
     </table>
     <br>
     <table width="500" border="1" >
@@ -44,11 +49,19 @@ include_once "html_header.php";
             <th>Услуга</th>
             <th>Цена</th>
         </tr>
+        <?php foreach ($results as $result):?>
+            <tr>
+                <th width="200px"><?php echo $result['date']?></th>
+                <th width="200px"><?php echo $result['service']?></th>
+                <th width="200px"><?php echo $result['price']?></th>
+            </tr>
+        <?php endforeach;?>
         </thead>
 
     </table>
 </div>
 
 <?php
+
 include_once "html_footer.php"
 ?>

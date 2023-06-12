@@ -22,9 +22,9 @@
 ?>
 <?php
 include_once "html_header.php";
-
 ?>
 <div>
+    <a href="/">На Главную</a>
     <form action="" method="post">
         <input type="text" name="login" id="login" placeholder="Логин"><br>
         <input type="text" name="password" id="password" placeholder="Пароль"><br>
