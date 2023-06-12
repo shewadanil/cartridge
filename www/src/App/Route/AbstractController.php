@@ -14,7 +14,6 @@ abstract class AbstractController {
 
     public function __construct(Request $request) {
         $this->request = $request;
-        $this->db = new Db();
     }
 
     /*public abstract function handle(): Response;*/

@@ -1,6 +1,5 @@
 <?php
 include_once "html_header.php";
-
 ?>
     <div>
         <a href="login"><button>Войти</button></a>
@@ -33,8 +32,8 @@ include_once "html_header.php";
         </tr>
         <?php foreach ($results as $result):?>
         <tr>
-            <th width="200px"><?php echo $result['barcode']?></th>
-            <th width="200px"><?php echo $result['model']?></th>
+            <th width="200px"><?php echo $result->getId()?></th>
+            <th width="200px"><?php echo $result->getModel()?></th>
         </tr>
         <?php endforeach;?>
 
@@ -51,9 +50,9 @@ include_once "html_header.php";
         </tr>
         <?php foreach ($results as $result):?>
             <tr>
-                <th width="200px"><?php echo $result['date']?></th>
-                <th width="200px"><?php echo $result['service']?></th>
-                <th width="200px"><?php echo $result['price']?></th>
+                <th width="200px"><?php echo $result->getDate()?></th>
+                <th width="200px"><?php echo $result->getService()?></th>
+                <th width="200px"><?php echo $result->getPrice()?></th>
             </tr>
         <?php endforeach;?>
         </thead>

@@ -31,7 +31,7 @@ class Request
 
     }
 
-    public function post($key, $default = null)
+    public function getPostKey($key, $default = null)
     {
         if (isset($this->post[$key])) {
             return $this->post[$key];
@@ -76,6 +76,11 @@ class Request
     public function getMethod(): string
     {
         return $this->method;
+    }
+    public function getPost(): array
+    {
+        return $this->post;
+
     }
 
 }

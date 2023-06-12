@@ -7,7 +7,9 @@ namespace App;
 class Db
 {
     private \PDO $pdo;
-    public function __construct(){
+    private static int $count;
+    private static  $connection;
+    private function __construct(){
         $dboption = require_once 'config/dbconfig.php';
         $this->pdo = new \PDO('mysql:host=' . $dboption['host'] . ';dbname=' . $dboption['dbname'] ,
             $dboption['user'],
@@ -25,6 +27,12 @@ class Db
         return $sth->fetchAll(\PDO::FETCH_CLASS, $class_name);
 
     }
+    public static function getConnection(): self{
+        if (self::$connection === null){
+            self::$connection = new self();
+        }
+        return self::$connection;
+}
 
 
 }
