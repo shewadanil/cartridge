@@ -17,7 +17,7 @@ abstract class ActiveRecordEntity
         return $db->query('SELECT * FROM`'. static::getTableName() . '`
         WHERE id =:id;',[':id' => $id],static::class);
     }
-    public static function getByBarcode(int $barcode){
+    public static function getByBarcode($barcode){
         $db = Db::getConnection();
         $sql = 'SELECT * FROM`'. static::getTableName() . '`
         WHERE barcode =:barcode;';
