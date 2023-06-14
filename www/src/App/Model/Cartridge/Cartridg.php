@@ -8,33 +8,34 @@ use App\Model\ActiveRecordEntity;
 class Cartridg extends ActiveRecordEntity
 {
     #[Properties("id")]
-    public int $id;
+    protected int $id;
     #[Properties("model")]
-    private string $model;
+    protected string $model;
     #[Properties("barcode")]
-    private int $barcode;
+    protected int $barcode;
     #[Properties("service")]
-    private string $service;
+    protected string $service;
     #[Properties("price")]
-    private int $price;
+    protected int $price;
     #[Properties("date")]
-    private $date;
-    public function getId(){
+    protected string $date;
+
+    public function getId():string{
         return $this->id;
     }
-    public function getModel(){
+    public function getModel():string{
         return $this->model;
     }
-    public function getBarcode(){
+    public function getBarcode():int{
         return $this->barcode;
     }
-    public function getService(){
+    public function getService():string{
         return $this->service;
     }
-    public function getPrice(){
+    public function getPrice():int{
         return $this->price;
     }
-    public function getDate(){
+    public function getDate():string{
         return $this->date;
     }
     protected static function getTableName(): string

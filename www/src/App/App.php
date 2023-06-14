@@ -20,8 +20,8 @@ class App
         try {
             $controller  = $this->controllerFabric();
             if($controller != null){
-                $rou = $this->route;
-                return $controller->$rou();
+                $route = $this->route;
+                return $controller->$route(); // Возвращает метод RoutController
             }else {
                 return new Response(new View('error/not_found'), 404);
             }
@@ -39,17 +39,11 @@ class App
         if($this->request->getUri() === '/new_record' && $this->request->getMethod() === 'GET') {
             return $this->controller('record');
         }
-        if($this->request->getUri() === '/db' && $this->request->getMethod() === 'POST') {
-            return $this->controller('');
-        }
-        if($this->request->getUri() === '/cartrige' && $this->request->getMethod() === 'PUT') {
-            return $this->controller('edit_cartirige');
-        }
-        if($this->request->getUri() === '/cartrige' && $this->request->getMethod() === 'DELETE') {
-            return $this->controller('delete_cartrige');
-        }
         if($this->request->getUri() === '/login' && $this->request->getMethod() === 'GET') {
             return $this->controller('login');
+        }
+        if($this->request->getUri() === '/edit_cartridge' && $this->request->getMethod() === 'POST') {
+            return $this->controller('edit_cartridge');
         }
             return null;
 
@@ -58,13 +52,14 @@ class App
 
     protected function controller(string $type) : ?AbstractController {
         $classattr = $this->scanClass->findClassByAttribute("App\Attribute\Route");
+
        foreach ($classattr as $value){
-           $methodatr = $this->scanClass->findMethodByAttribute($value);
-           foreach ($methodatr as $result){
+           $methodattr = $this->scanClass->findMethodByAttribute($value);
+           foreach ($methodattr as $result){
                if ($result === $type){
                    /*print_r($result);*/
                    $this->route = $result;
-                   return new $value($this->request);
+                   return new $value($this->request); //Возвращает RouteController
                }
            }
 

@@ -18,11 +18,10 @@ class Request
             $this->post[$key] = $value;
         }
         $result = parse_url($_SERVER['REQUEST_URI']);
-        if (isset($result['query'])) parse_str($result['query'], $this->get);
+        if (isset($result['query']))
+            parse_str($result['query'], $this->get);
         else $this->get = [];
         $this->uri = $result['path'];
-
-        $this->cookie = [];
         foreach ($_COOKIE as $key => $value) {
             $this->cookie[$key] = $value;
         }

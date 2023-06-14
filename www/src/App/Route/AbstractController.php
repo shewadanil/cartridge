@@ -7,7 +7,6 @@ use App\Request;
 use App\Response;
 use App\View\ViewInterface;
 
-
 abstract class AbstractController {
     protected Request $request;
     protected Db $db;

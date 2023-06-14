@@ -89,10 +89,10 @@ class ScanClass
             }
         }
     }
-    public function findClassByAttribute ($nameAttribute) : array {
+    public function findClassByAttribute ($nameClass) : array {
         $array = [];
         foreach ($this->arrayargument as $name => $value){
-                if ($name === $nameAttribute){
+                if ($name === $nameClass){
                     foreach ($value as $result) {
                         $array[] = $result;
                     }
@@ -100,10 +100,10 @@ class ScanClass
         }
         return $array;
     }
-    public function findMethodByAttribute ($nameAttribute) : array {
+    public function findMethodByAttribute ($nameClass) : array {
         $array = [];
         foreach ($this->arrayamethod as $name => $value){
-            if ($name === $nameAttribute){
+            if ($name === $nameClass){
                 foreach ($value as $result) {
                     $array[] = $result;
                 }
@@ -111,10 +111,18 @@ class ScanClass
         }
         return $array;
     }
-    public function getPropertiesAttribute () : array {
-
-        return $this->arrayaproperties;
+    public function findPropertiesAttribute ($nameClass) : array {
+        $array = [];
+        foreach ($this->arrayaproperties as $name => $value){
+            if ($name === $nameClass){
+                foreach ($value as $result) {
+                    $array[] = $result;
+                }
+            }
+        }
+        return $array;
     }
+
 
 
 
