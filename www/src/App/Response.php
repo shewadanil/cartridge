@@ -40,24 +40,21 @@ class Response
     {
         return $this->status;
     }
-    public function setHeader($key, $value){
-        if (!isset($this->headers[$key])){
-            $this->headers[$key] = [$value];
+    public function setHeader($name, $key){
+        if (!isset($this->headers[$name])){
+            $this->headers[$name] = [$key];
         }else{
-            $this->headers[$key][] = $value;
+            $this->headers[$name][] = $key;
         }
     }
     function generateResponse(){
         http_response_code($this->status);
         foreach ($this->headers as $name => $value){
-
             foreach ($value as $key){
-                header("{$name}: {$key}", false);
-
-            }
+                header("{$name}: {$key}", false, $this->status);
+                exit();            }
         }
         echo $this->view->handle();
-
-
     }
+
 }

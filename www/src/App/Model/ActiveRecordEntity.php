@@ -13,7 +13,7 @@ abstract class ActiveRecordEntity
     }
     abstract protected static function getTableName():string;
 
-    public static function getById(int $id){
+    public static function getById($id){
         $db = Db::getConnection();
         $entities = $db->query('SELECT * FROM`'. static::getTableName() . '`
         WHERE id =:id;',[':id' => $id],static::class);
@@ -26,16 +26,54 @@ abstract class ActiveRecordEntity
         return $db->query($sql,[':barcode' => $barcode],static::class);
 
     }
-    public function save($id){
+    public function save(){
         $mapedProperti = $this->mapProperti();
-        if($id != null){
-            $this->update($mapedProperti, $id);
+        if($this->id != null){
+            $this->update($mapedProperti);
         }
         else {
             self::insert($mapedProperti);
         }
-
     }
+    public function update(array $properties){
+        $index = 1;
+        $paramValue = [];
+        $columnParam = [];
+        foreach ($properties as $column => $value){
+            if ($value != ''){
+                $param = ':param' . $index;
+                $columnParam[] = $column . ' = ' . $param;
+                $paramValue[$param] = $value;
+                $index++;
+            }
+        }
+        $sql = 'UPDATE ' . static::getTableName() . ' SET '
+            . implode(", ",$columnParam) . ' WHERE `id` = ' . $this->id;
+        /*var_dump($sql);
+        var_dump($columnParam);*/
+        $db = Db::getConnection();
+        $db->query($sql, $paramValue, static::class);
+    }
+
+    public function insert($properties){
+        $index = 1;
+        $columnName = [];
+        $columnParam = [];
+        foreach ($properties as $column => $value){
+            if ($column != 'id'&& $value != ''){
+                $param = ':' . $column;
+                $columnName[] = '`' . $column . '`';
+                $columnParam[] = $param;
+                $paramValue[$param] = $value;
+                $index++;
+            }
+        }
+        $sql = 'INSERT INTO ' . static::getTableName() .' ('. implode(', ', $columnName) .')' .
+            'VALUES ('. implode(', ', $columnParam) .')';
+        $db = Db::getConnection();
+        $db->query($sql, $paramValue, static::class);
+    }
+
     private function mapProperti():array{
         $mapedProperti = [];
         $scanclass = new ScanClass("src");
@@ -45,22 +83,13 @@ abstract class ActiveRecordEntity
         }
         return $mapedProperti;
     }
-    public static function update(array $properties, $id){
-        $index = 1;
-        $paramValue = [];
-        $columnParam = [];
-        foreach ($properties as $column => $value){
-            $param = ':param' . $index;
-            $columnParam[] = $value . ' = ' . $param;
-            $paramValue[$param] = $value;
-            $index++;
-        }
-        var_dump($paramValue);
-        var_dump($columnParam);
-
+    public function createNewRecord($array = []){
+        $this->setValue($array);
+        $this->save();
     }
-    public static function insert($properties){
-
+    public function delete($id){
+        $db = Db::getConnection();
+        $sql = 'DELETE FROM ' . static::getTableName() . ' WHERE id = :id';
+        $db->query($sql, [':id' => $id]);
     }
-
 }

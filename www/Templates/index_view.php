@@ -43,6 +43,10 @@ include_once "html_header.php";
                     <input type="hidden" name="id" id="id" value="<?php echo $result->getId()?>">
                     <button type="submit" >Редактировать</button>
                 </form>
+                <form action="delete_cartridge" method="post">
+                    <input type="hidden" name="id" id="id" value="<?php echo $result->getId()?>">
+                    <button type="submit" >Удалить</button>
+                </form>
             </th>
         </tr>
         <?php endforeach;?>

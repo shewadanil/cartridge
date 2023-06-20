@@ -18,7 +18,7 @@ class App
     }
     public function handle() : Response{
         try {
-            $controller  = $this->controllerFabric();
+            $controller = $this->controllerFabric();
             if($controller != null){
                 $route = $this->route;
                 return $controller->$route(); // Возвращает метод RoutController
@@ -36,14 +36,19 @@ class App
         if($this->request->getUri() === '/') {
             return $this->controller('main');
         }
-        if($this->request->getUri() === '/new_record' && $this->request->getMethod() === 'GET') {
-            return $this->controller('record');
+        if($this->request->getUri() === '/new_record') {
+            return $this->controller('new_record');
         }
         if($this->request->getUri() === '/login' && $this->request->getMethod() === 'GET') {
             return $this->controller('login');
         }
-        if($this->request->getUri() === '/edit_cartridge' && $this->request->getMethod() === 'POST') {
+        if($this->request->getUri() === '/edit_cartridge') {
             return $this->controller('edit_cartridge');
+        }if($this->request->getUri() === '/delete_cartridge') {
+            return $this->controller('delete_cartridge');
+        }
+        if($this->request->getUri() === '/record_apply') {
+            return $this->controller('record_apply');
         }
             return null;
 

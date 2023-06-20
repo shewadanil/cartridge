@@ -25,17 +25,22 @@
 
 
 */?>
-
-<body>
+<?php
+include_once "html_header.php";
+?>
 <a href="/">На Главную</a>
-
+<?php if($check === null):?>
 <form action="" method="post">
     <input type="text" name="model" id="model" value="<?php echo $results->getModel()?>"><br>
     <input type="text" name="barcode" id="barcode" value="<?php echo $results->getBarcode()?>"> <br>
     <input type="text" name="service" id="service" value="<?php echo $results->getService()?>"> <br>
     <input type="text" name="price" id="price" value="<?php echo $results->getPrice()?>"> <br>
-    <input type="text" name="id" id="id" value="<?php echo $results->getId()?>"> <br>
+    <input type="date" name="date" id="date" value="<?php echo $results->getDate()?>"> <br>
     <button type="submit">Отправить</button>
+    <input type="hidden" name="id" id="id" value="<?php echo $results->getId()?>"> <br>
+    <input type="hidden" name="check" id="check" value="<?php echo $check = true?>"> <br>
 </form>
-</body>
-
+<?php endif;?>
+<?php
+include_once "html_footer.php"
+?>

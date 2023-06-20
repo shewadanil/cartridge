@@ -27,18 +27,27 @@ class Request
         }
         $this->method = $_SERVER['REQUEST_METHOD'];
 
-
     }
 
-    public function getPostKey($key, $default = null)
+    public function getPostKey($key)
     {
         if (isset($this->post[$key])) {
             return $this->post[$key];
         }
-        return $default;
+        return null;
 
     }
+    public function getPostArrayKey($key = []):array
+    {
+        $array = [];
+        foreach ($key as $value){
+            if (isset($this->post[$value])) {
+                $array[$value] = $this->post[$value];
+            }
+        }
+        return $array;
 
+    }
     public function getCookie($key)
     {
         return isset($this->cookie[$key]);
@@ -55,20 +64,9 @@ class Request
 
     }
 
-    public function getKey($key, $default = null)
-    {
-        if (isset($this->get[$key])) {
-            return $this->get[$key];
-        }
-        return $default;
-
-    }
-
     public function getUri()
     {
-
         return $this->uri;
-
     }
 
 
@@ -80,6 +78,12 @@ class Request
     {
         return $this->post;
 
+    }
+    public function getGet($key){
+        if (isset($this->get[$key])) {
+            return $this->get[$key];
+        }
+        return null;
     }
 
 }

@@ -14,10 +14,13 @@ abstract class AbstractController {
     public function __construct(Request $request) {
         $this->request = $request;
     }
-
-    /*public abstract function handle(): Response;*/
-    protected function successResponse(ViewInterface $view){
-        return new Response($view);
+    protected function successResponse(ViewInterface $view, int $code):Response{
+        return new Response($view, $code);
+    }
+    protected function redirect(ViewInterface $view, $url, $code):Response{
+        $response = new Response($view, $code);
+        $response->setHeader('Location', $url);
+        return $response;
     }
 
 }

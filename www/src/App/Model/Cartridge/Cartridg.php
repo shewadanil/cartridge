@@ -8,17 +8,17 @@ use App\Model\ActiveRecordEntity;
 class Cartridg extends ActiveRecordEntity
 {
     #[Properties("id")]
-    protected int $id;
+    protected $id;
     #[Properties("model")]
-    protected string $model;
+    protected  $model;
     #[Properties("barcode")]
-    protected int $barcode;
+    protected $barcode;
     #[Properties("service")]
-    protected string $service;
+    protected  $service;
     #[Properties("price")]
-    protected int $price;
+    protected  $price;
     #[Properties("date")]
-    protected string $date;
+    protected  $date;
 
     public function getId():string{
         return $this->id;
@@ -42,6 +42,29 @@ class Cartridg extends ActiveRecordEntity
     {
         return "cartridge";
 
+    }
+    protected function arrayValue():array{
+        $value = ['id' => $this->id, 'model' => $this->model, 'barcode'=> $this->barcode,
+            'service'=> $this->service,'price'=> $this->price, 'date'=> $this->date];
+        return $value;
+    }
+    private function giveProperty(): array{
+        $value = ['id', 'model', 'barcode',
+            'service','price', 'date'];
+        return $value;
+    }
+    public function setValue($value = []){
+        $array = $this->giveProperty();
+        foreach ($array as $arrayVal){
+            foreach ($value as $valueKey => $valueVal) {
+                if ($valueKey === $arrayVal){
+                    if ($valueKey != ''){
+                        $this->$valueKey = $valueVal;
+                    }
+
+                }
+            }
+        }
     }
 }
 
