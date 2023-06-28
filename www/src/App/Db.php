@@ -24,7 +24,8 @@ class Db
         if (false === $result){
             return null;
         }
-        return $sth->fetchAll(\PDO::FETCH_CLASS, $class_name);
+        $res = $sth->fetchAll(\PDO::FETCH_CLASS, $class_name);
+        return $res;
 
     }
     public static function getConnection(): self{

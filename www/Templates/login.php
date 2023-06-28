@@ -29,6 +29,7 @@ include_once "html_header.php";
         <input type="text" name="login" id="login" placeholder="Логин"><br>
         <input type="text" name="password" id="password" placeholder="Пароль"><br>
         <button type="submit">Войти</button>
+        <input type="hidden" name="check" id="check" value="<?php echo $check = true?>"><br>
     </form>
 </div>
 <?php

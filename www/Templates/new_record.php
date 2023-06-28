@@ -2,7 +2,7 @@
 include_once "html_header.php";
 ?>
     <a href="/">На Главную</a>
-<?php if ($check === null):?>
+
     <form action="" method="post">
         <input type="text" name="model" id="model" placeholder="Модель"><br>
         <input type="text" name="barcode" id="barcode" placeholder="Штрихкод"><br>
@@ -12,7 +12,6 @@ include_once "html_header.php";
         <button type="submit">Отправить</button>
         <input type="hidden" name="check" id="check" value="<?php echo $check = true?>"><br>
     </form>
-<?php endif?>
 <?php
 include_once "html_footer.php"
 ?>

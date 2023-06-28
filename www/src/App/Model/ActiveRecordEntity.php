@@ -47,10 +47,8 @@ abstract class ActiveRecordEntity
                 $index++;
             }
         }
-        $sql = 'UPDATE ' . static::getTableName() . ' SET '
+        $sql = 'UPDATE `' . static::getTableName() . '` SET '
             . implode(", ",$columnParam) . ' WHERE `id` = ' . $this->id;
-        /*var_dump($sql);
-        var_dump($columnParam);*/
         $db = Db::getConnection();
         $db->query($sql, $paramValue, static::class);
     }
@@ -91,5 +89,14 @@ abstract class ActiveRecordEntity
         $db = Db::getConnection();
         $sql = 'DELETE FROM ' . static::getTableName() . ' WHERE id = :id';
         $db->query($sql, [':id' => $id]);
+    }
+    public static function findByColumn(string $columnName, $value){
+        $db = Db::getConnection();
+        $sql = 'SELECT * FROM`' . static::getTableName() . '` WHERE ' . $columnName . ' = :value LIMIT 1;';
+        $result = $db->query($sql,[':value' => $value],static::class);
+        if ($result === []){
+            return null;
+        }
+        return $result[0];
     }
 }

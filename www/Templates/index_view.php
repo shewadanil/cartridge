@@ -16,7 +16,6 @@ include_once "html_header.php";
     <form action="" method="post">
         <input type="text" name="barcode" id="barcode" placeholder="Штрихкод"> <br>
         <button type="submit">Отправить</button>
-
     </form>
 </div>
 
@@ -31,13 +30,14 @@ include_once "html_header.php";
             <th>Услуга</th>
             <th>Цена</th>
         </tr>
+        <?php if (isset($results) === true):?>
         <?php foreach ($results as $result):?>
         <tr>
-            <th width="200px"><?php echo $result->getBarcode()?></th>
-            <th width="200px"><?php echo $result->getModel()?></th>
-            <th width="200px"><?php echo $result->getDate()?></th>
-            <th width="200px"><?php echo $result->getService()?></th>
-            <th width="200px"><?php echo $result->getPrice()?></th>
+            <th ><?php echo $result->getBarcode()?></th>
+            <th ><?php echo $result->getModel()?></th>
+            <th ><?php echo $result->getDate()?></th>
+            <th ><?php echo $result->getService()?></th>
+            <th ><?php echo $result->getPrice()?></th>
             <th>
                 <form action="edit_cartridge" method="post">
                     <input type="hidden" name="id" id="id" value="<?php echo $result->getId()?>">
@@ -50,8 +50,10 @@ include_once "html_header.php";
             </th>
         </tr>
         <?php endforeach;?>
-
-
+        <?php endif;?>
+        <?php if (isset($check) === true && isset($results[0]) === false):?>
+        <div><p>Такого штрихкода несуществует</p></div>
+        <?php endif;?>
         </thead>
     </table>
     <br>

@@ -43,18 +43,13 @@ class Cartridg extends ActiveRecordEntity
         return "cartridge";
 
     }
-    protected function arrayValue():array{
-        $value = ['id' => $this->id, 'model' => $this->model, 'barcode'=> $this->barcode,
-            'service'=> $this->service,'price'=> $this->price, 'date'=> $this->date];
-        return $value;
-    }
-    private function giveProperty(): array{
+    private function getProperty(): array{
         $value = ['id', 'model', 'barcode',
             'service','price', 'date'];
         return $value;
     }
     public function setValue($value = []){
-        $array = $this->giveProperty();
+        $array = $this->getProperty();
         foreach ($array as $arrayVal){
             foreach ($value as $valueKey => $valueVal) {
                 if ($valueKey === $arrayVal){

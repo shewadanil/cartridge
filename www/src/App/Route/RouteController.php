@@ -5,6 +5,7 @@ namespace App\Route;
 use App\Attribute\Route;
 use App\Attribute\RouteMethod;
 use App\Model\Cartridge\Cartridg;
+use App\Model\User\User;
 use App\View\RawHtmlView;
 use App\View\View;
 use App\Response;
@@ -15,13 +16,22 @@ class RouteController extends AbstractController
     public function main(): Response
     {
         $barcode = Cartridg::getByBarcode($this->request->getPostKey('barcode'));
-        $response = $this->successResponse(new View("index_view", ['results'=>$barcode]), 200);
+        $check = $this->request->getPostKey('barcode');
+        $response = $this->successResponse(new View("index_view", ['results'=>$barcode,'check' =>$check]), 200);
         return $response;
     }
     #[Route("login")]
     public function login(): Response
     {
-        $response = $this->successResponse(new View("login"), 200);
+        $check = $this->request->getPostKey('check');
+        if ($check != null && $this->request->getPostKey('login')!= null){
+            $array = $this->request->getPostArrayKey(['login', 'password']);
+            $user = User::login($array);
+            $response = $this->successResponse(new View("login", ['check' => $check]), 200);
+            /*$response = $this->redirect(new RawHtmlView(''), '/', 302);*/
+        }else{
+            $response = $this->successResponse(new View("login", ['check' => $check]), 200);
+        }
         return $response;
     }
 
