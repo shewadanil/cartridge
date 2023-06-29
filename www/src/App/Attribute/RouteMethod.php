@@ -6,5 +6,5 @@ namespace App\Attribute;
 #[\Attribute]
 class RouteMethod
 {
-    public function __construct($name){}
+    public function __construct($uri, $method){}
 }

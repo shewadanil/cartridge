@@ -4,20 +4,20 @@ use App\Attribute\Table;
 use App\Attribute\Method;
 use App\Attribute\Properties;
 use App\Model\ActiveRecordEntity;
-#[Table(Cartridg::class)]
+#[Table]
 class Cartridg extends ActiveRecordEntity
 {
-    #[Properties("id")]
+    #[Properties]
     protected $id;
-    #[Properties("model")]
+    #[Properties]
     protected  $model;
-    #[Properties("barcode")]
+    #[Properties]
     protected $barcode;
-    #[Properties("service")]
+    #[Properties]
     protected  $service;
-    #[Properties("price")]
+    #[Properties]
     protected  $price;
-    #[Properties("date")]
+    #[Properties]
     protected  $date;
 
     public function getId():string{

@@ -2,16 +2,20 @@
 
 
 namespace App\Route;
+use App\Attribute\RouteMethod;
+use App\Model\Cartridge\Cartridg;
 use App\View\View;
 use App\Response;
 use App\Attribute\Route;
-#[Route(MainController::class)]
+#[Route()]
 class MainController extends AbstractController
 {
-
-    public function handle(): Response
+    #[RouteMethod('/')]
+    public function main(): Response
     {
-        $response = $this->successResponse(new View("index_view"));
+        $barcode = Cartridg::getByBarcode($this->request->getPostKey('barcode'));
+        $check = $this->request->getPostKey('barcode');
+        $response = $this->successResponse(new View("index_view", ['results'=>$barcode,'check' =>$check]), 200);
         return $response;
     }
 }

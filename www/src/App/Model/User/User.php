@@ -8,18 +8,18 @@ use App\Attribute\Properties;
 use App\Attribute\Table;
 use App\Model\ActiveRecordEntity;
 
-#[Table(User::class)]
+#[Table]
 class User extends ActiveRecordEntity
 {
-    #[Properties("id")]
+    #[Properties]
     protected $id;
-    #[Properties("nikname")]
+    #[Properties]
     protected $nikname;
-    #[Properties("passwordHach")]
+    #[Properties]
     protected $passwordHach;
-    #[Properties("passwordHach")]
+    #[Properties]
     protected $role;
-    #[Properties("authToken")]
+    #[Properties]
     protected $authToken;
 
     public function getPasswordHach(){

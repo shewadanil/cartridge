@@ -11,7 +11,7 @@ class App
 {
     private Request $request;
     private ScanClass $scanClass;
-    public $route;
+    private $route;
 
     public function __construct(Request $req) {
         $this->request = $req;
@@ -19,7 +19,7 @@ class App
     }
     public function handle() : Response{
         try {
-            $controller = $this->controllerFabric();
+            $controller = $this->controller();
             if($controller != null){
                 $route = $this->route;
                 return $controller->$route(); // Возвращает метод RoutController
@@ -37,7 +37,25 @@ class App
 
     }
 
-    protected function controllerFabric() : ?AbstractController {
+    protected function controller() : ?AbstractController {
+        $uri = $this->request->getUri();
+        $httpMethod = $this->request->getMethod();
+        $classattr = $this->scanClass->findRoute($uri, $httpMethod);
+        if ($classattr === null){
+            return null;
+        }
+       foreach ($classattr as $className => $method){
+           foreach ($method as $nameMethod => $result){
+               var_dump($result);
+                   $this->route = $nameMethod;
+                   return new $className($this->request); //Возвращает RouteController
+
+           }
+
+        }
+       return null;
+    }
+    /*protected function controllerFabric() : ?AbstractController {
         if($this->request->getUri() === '/') {
             return $this->controller('main');
         }
@@ -55,35 +73,9 @@ class App
         if($this->request->getUri() === '/record_apply') {
             return $this->controller('record_apply');
         }
-            return null;
-
-    }
-
-
-    protected function controller(string $type) : ?AbstractController {
-        $classattr = $this->scanClass->findClassByAttribute("App\Attribute\Route");
-
-       foreach ($classattr as $value){
-           $methodattr = $this->scanClass->findMethodByAttribute($value);
-           foreach ($methodattr as $result){
-               if ($result === $type){
-                   /*print_r($result);*/
-                   $this->route = $result;
-                   return new $value($this->request); //Возвращает RouteController
-               }
-           }
-
-        }
-       /* switch($type) {
-            case 'main':
-                return new \App\Controller\MainController($this->request);
-            case 'login':
-                return new \App\Controller\LoginController($this->request);
-            case 'create_cartridge':
-                return new \App\Controller\RecordController($this->request);
-        }*/
         return null;
-    }
+
+    }*/
 
 
 }

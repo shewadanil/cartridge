@@ -8,10 +8,11 @@ use ReflectionAttribute;
 
 class ScanClass
 {
-    private array $arrayargument;
+    private array $arrayclass;
     private array $arrayamethod;
     private array $arrayaproperties;
     private array $array_full;
+    private array $routMethod;
     private string $dir;
     public function __construct($dir){
         $this->dir = $dir;
@@ -56,9 +57,7 @@ class ScanClass
        foreach ($this->array_full as $classname){
            $class = new \ReflectionClass($classname);
            foreach ($class->getAttributes() as $value){
-               foreach ($value->getArguments() as $result){
-                   $this->arrayargument[$value->getName()][] = $result;
-               }
+               $this->arrayclass[$value->getName()][] = $class->getName();
            }
        }
     }
@@ -68,8 +67,9 @@ class ScanClass
             $class = new \ReflectionClass($classname);
             foreach ($class->getMethods() as $method){
                 foreach ($method->getAttributes() as $methodValue){
-                    foreach ($methodValue->getArguments() as $methodResult){
-                        $this->arrayamethod[$classname][] = $methodResult;
+                    $this->arrayamethod[$classname][] = $method->getName();
+                    foreach ($methodValue->getArguments() as $routarg){
+                        $this->routMethod[$classname][$method->getName()][] = $routarg;
                     }
                 }
             }
@@ -82,23 +82,28 @@ class ScanClass
             $class = new \ReflectionClass($classname);
             foreach ($class->getProperties() as $properties){
                 foreach ($properties->getAttributes() as $propertiesValue){
-                    foreach ($propertiesValue->getArguments() as $propertiesResult){
-                        $this->arrayaproperties[$classname][] = $propertiesResult;
-                    }
+                    $this->arrayaproperties[$classname][] = $properties->getName();
                 }
             }
         }
     }
-    public function findClassByAttribute ($nameClass) : array {
+    public function findRoute($uri, $httpMethod) {
+        /*var_dump($this->routMethod);
+        var_dump($this->arrayaproperties);
+        var_dump($this->arrayclass);*/
         $array = [];
-        foreach ($this->arrayargument as $name => $value){
-                if ($name === $nameClass){
-                    foreach ($value as $result) {
-                        $array[] = $result;
+        foreach ($this->routMethod as $class => $method){
+            foreach ($method as $nameMethod => $result){
+                foreach ($result as $value){
+                    var_dump($value);
+                    if ($value === $uri){
+                        $array[$class] = $method;
+                        return $array;
                     }
                 }
+            }
         }
-        return $array;
+        return null;
     }
     public function findMethodByAttribute ($nameClass) : array {
         $array = [];

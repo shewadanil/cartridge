@@ -9,33 +9,10 @@ use App\Model\User\User;
 use App\View\RawHtmlView;
 use App\View\View;
 use App\Response;
-#[Route(RouteController::class)]
+#[Route]
 class RouteController extends AbstractController
 {
-    #[Route("main")]
-    public function main(): Response
-    {
-        $barcode = Cartridg::getByBarcode($this->request->getPostKey('barcode'));
-        $check = $this->request->getPostKey('barcode');
-        $response = $this->successResponse(new View("index_view", ['results'=>$barcode,'check' =>$check]), 200);
-        return $response;
-    }
-    #[Route("login")]
-    public function login(): Response
-    {
-        $check = $this->request->getPostKey('check');
-        if ($check != null && $this->request->getPostKey('login')!= null){
-            $array = $this->request->getPostArrayKey(['login', 'password']);
-            $user = User::login($array);
-            $response = $this->successResponse(new View("login", ['check' => $check]), 200);
-            /*$response = $this->redirect(new RawHtmlView(''), '/', 302);*/
-        }else{
-            $response = $this->successResponse(new View("login", ['check' => $check]), 200);
-        }
-        return $response;
-    }
-
-    #[Route("new_record")]
+    #[RouteMethod('/new_record', 'GET')]
     public function new_record(): Response
     {
         $check = $this->request->getPostKey('check');
@@ -50,7 +27,7 @@ class RouteController extends AbstractController
         return $response;
     }
 
-    #[Route("edit_cartridge")]
+    #[RouteMethod('/edit_cartridge', 'GET')]
     public function edit_cartridge(): Response
     {
         $check = $this->request->getPostKey('check');
@@ -67,7 +44,7 @@ class RouteController extends AbstractController
         }
         return $response;
     }
-    #[Route("record_apply")]
+    #[RouteMethod('/record_apply', 'GET')]
     public function record_apply(): Response
     {
             $check = $this->request->getGet('check');
@@ -75,7 +52,7 @@ class RouteController extends AbstractController
                 ['check' => $check,]), 200);
             return $response;
     }
-    #[Route("delete_cartridge")]
+    #[RouteMethod('/delete_cartridge', 'GET')]
     public function delete_cartridge(): Response
     {
         $check = $this->request->getPostKey('check');
