@@ -1,5 +1,5 @@
 <?php
-include_once "html_header.php";
+include_once __DIR__ . "/../html_header.php";
 ?>
 <a href="/">На Главную</a>
 <div>
@@ -42,5 +42,5 @@ include_once "html_header.php";
 
 
 <?php
-include_once "html_footer.php"
+include_once __DIR__ . "/../html_footer.php"
 ?>

@@ -17,9 +17,6 @@ class ScanClass
     public function __construct($dir){
         $this->dir = $dir;
         $this->scanDirectory($dir);
-        $this->MethodsAttribute();
-        $this->ClassAttribute();
-        $this->PropertiesAttribute();
     }
     private function scanDirectory($nameDirectory) : array {
         $dir = scandir($nameDirectory);
@@ -87,23 +84,23 @@ class ScanClass
             }
         }
     }
-    public function findRoute($uri, $httpMethod) {
-        /*var_dump($this->routMethod);
-        var_dump($this->arrayaproperties);
-        var_dump($this->arrayclass);*/
+    public function findRoute($uri) :array{
+        $this->MethodsAttribute();
+        $this->ClassAttribute();
         $array = [];
+        $check ='';
         foreach ($this->routMethod as $class => $method){
             foreach ($method as $nameMethod => $result){
                 foreach ($result as $value){
-                    var_dump($value);
                     if ($value === $uri){
-                        $array[$class] = $method;
+                        $array[$class][$nameMethod] = $result;
                         return $array;
                     }
                 }
             }
+
         }
-        return null;
+        return $array = [];
     }
     public function findMethodByAttribute ($nameClass) : array {
         $array = [];
@@ -117,6 +114,7 @@ class ScanClass
         return $array;
     }
     public function findPropertiesAttribute ($nameClass) : array {
+        $this->PropertiesAttribute();
         $array = [];
         foreach ($this->arrayaproperties as $name => $value){
             if ($name === $nameClass){

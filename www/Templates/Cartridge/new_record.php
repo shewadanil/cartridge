@@ -1,5 +1,5 @@
 <?php
-include_once "html_header.php";
+include_once __DIR__ . "/../html_header.php";
 ?>
     <a href="/">На Главную</a>
 
@@ -10,8 +10,7 @@ include_once "html_header.php";
         <input type="text" name="price" id="price" placeholder="Цена"><br>
         <input type="date" name="date" id="date" placeholder="Дата"><br>
         <button type="submit">Отправить</button>
-        <input type="hidden" name="check" id="check" value="<?php echo $check = true?>"><br>
     </form>
 <?php
-include_once "html_footer.php"
+include_once __DIR__ . "/../html_footer.php"
 ?>

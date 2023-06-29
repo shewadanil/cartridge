@@ -23,13 +23,15 @@
 <?php
 include_once "html_header.php";
 ?>
-<div>
+<div style="text-align: center">
     <a href="/">На Главную</a>
+    <?php if(!empty($error)):?>
+    <div> <?=$error?></div>
+    <?php endif?>
     <form action="" method="post">
         <input type="text" name="login" id="login" placeholder="Логин"><br>
         <input type="text" name="password" id="password" placeholder="Пароль"><br>
         <button type="submit">Войти</button>
-        <input type="hidden" name="check" id="check" value="<?php echo $check = true?>"><br>
     </form>
 </div>
 <?php

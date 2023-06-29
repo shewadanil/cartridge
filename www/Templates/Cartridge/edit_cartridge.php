@@ -26,10 +26,9 @@
 
 */?>
 <?php
-include_once "html_header.php";
+include_once __DIR__ . "/../html_header.php";
 ?>
 <a href="/">На Главную</a>
-<?php if($check === null):?>
 <form action="" method="post">
     <input type="text" name="model" id="model" value="<?php echo $results->getModel()?>"><br>
     <input type="text" name="barcode" id="barcode" value="<?php echo $results->getBarcode()?>"> <br>
@@ -38,9 +37,8 @@ include_once "html_header.php";
     <input type="date" name="date" id="date" value="<?php echo $results->getDate()?>"> <br>
     <button type="submit">Отправить</button>
     <input type="hidden" name="id" id="id" value="<?php echo $results->getId()?>"> <br>
-    <input type="hidden" name="check" id="check" value="<?php echo $check = true?>"> <br>
+
 </form>
-<?php endif;?>
 <?php
-include_once "html_footer.php"
+include_once __DIR__ . "/../html_footer.php"
 ?>

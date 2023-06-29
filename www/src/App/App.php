@@ -46,7 +46,6 @@ class App
         }
        foreach ($classattr as $className => $method){
            foreach ($method as $nameMethod => $result){
-               var_dump($result);
                    $this->route = $nameMethod;
                    return new $className($this->request); //Возвращает RouteController
 

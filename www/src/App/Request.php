@@ -7,7 +7,7 @@ class Request
 {
     private array $post = [];
     private array $get = [];
-    private array $cookie = [];
+    private array $cookie;
     private string $uri;
     private string $method;
 
@@ -47,6 +47,12 @@ class Request
         }
         return $array;
 
+    }
+    public function getPostStatus() : bool{
+        $ar = $this->post;
+        $res = array_shift($ar);
+        $res = isset($res);
+        return $res;
     }
     public function getCookie($key)
     {

@@ -1,5 +1,5 @@
 <?php
-include_once "html_header.php";
+include_once __DIR__ . "/../html_header.php";
 ?>
 <div>
     <a href="/">На Главную</a>
@@ -10,5 +10,5 @@ include_once "html_header.php";
     <?php endif;?>
 </div>
 <?php
-include_once "html_footer.php"
+include_once __DIR__ . "/../html_footer.php"
 ?>
