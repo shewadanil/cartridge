@@ -40,7 +40,7 @@ class App
     protected function controller() : ?AbstractController {
         $uri = $this->request->getUri();
         $httpMethod = $this->request->getMethod();
-        $classattr = $this->scanClass->findRoute($uri, $httpMethod);
+        $classattr = $this->scanClass->findRoute($uri);
         if ($classattr === null){
             return null;
         }

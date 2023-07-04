@@ -34,9 +34,9 @@ class Db
         }
         return self::$connection;
 }
-    public function getLastInsertId(): int
+    public function getLastInsertId($name = ''): int
     {
-        return (int) $this->pdo->lastInsertId();
+        return (int) $this->pdo->lastInsertId($name);
     }
 
 

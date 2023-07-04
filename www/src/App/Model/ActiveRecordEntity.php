@@ -99,4 +99,9 @@ abstract class ActiveRecordEntity
         }
         return $result[0];
     }
+    public static function returnLastRequest($name = '') :int {
+        $db = Db::getConnection();
+        return $db->getLastInsertId($name);
+    }
+
 }

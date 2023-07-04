@@ -19,8 +19,9 @@ class CartridgeController extends AbstractController
             $array = $this->request->getPostArrayKey(['id', 'barcode', 'price', 'date', 'model', 'service']);
             $cartridge = new Cartridg();
             $cartridge->createNewRecord($array);
+            $array['id'] = $cartridge->returnLastRequest();
             $response = $this->redirect(new RawHtmlView(''),
-                'Cartridge/record_apply?check=true', 302);
+                'cartridge/record_apply?check=true&id=' . $array['id'], 302);
         }else{
             $response = $this->successResponse(new View("Cartridge" . DIRECTORY_SEPARATOR . "new_record"), 200);
         }
@@ -30,13 +31,13 @@ class CartridgeController extends AbstractController
     #[RouteMethod('/edit_cartridge', 'GET')]
     public function edit_cartridge(): Response
     {
-
         $array = $this->request->getPostArrayKey(['id', 'barcode', 'price', 'date', 'model', 'service']);
         $cartridge = Cartridg::getById($this->request->getGet('id'));// Возвращает экземпляр класса по Id
         if ($this->request->getPostStatus()){
             $cartridge->setValue($array);
             $cartridge->save();
-            $response = $this->redirect(new RawHtmlView(''), "Cartridge/record_apply?check=true", 302);
+            $response = $this->redirect(new RawHtmlView(''),
+                "cartridge/record_apply?check=true&id=" . $array['id'], 302);
         }
         else{
             $response = $this->successResponse(new View("Cartridge" . DIRECTORY_SEPARATOR . "edit_cartridge",
@@ -44,12 +45,13 @@ class CartridgeController extends AbstractController
         }
         return $response;
     }
-    #[RouteMethod('/Cartridge/record_apply', 'GET')]
+    #[RouteMethod('/cartridge/record_apply', 'GET')]
     public function record_apply(): Response
     {
+        $cartridge = Cartridg::getById($this->request->getGet('id'));
         $check = $this->request->getGet('check');
         $response = $this->successResponse(new View("Cartridge" . DIRECTORY_SEPARATOR . "record_apply",
-                ['check' => $check,]), 200);
+                ['check' => $check, 'cartridge' => $cartridge]), 200);
         return $response;
     }
 
@@ -60,7 +62,8 @@ class CartridgeController extends AbstractController
         $cartridge = Cartridg::getById($this->request->getGet('id'));
         if ($this->request->getPostStatus()){
             $cartridge->delete($this->request->getPostKey('id'));
-            $response = $this->redirect(new RawHtmlView(''), "Cartridge" . DIRECTORY_SEPARATOR . "record_apply?check=true", 302);
+            $response = $this->redirect(new RawHtmlView(''), "Cartridge" . DIRECTORY_SEPARATOR .
+                "record_apply?check=true", 302);
         }else{
             $response = $this->successResponse(new View("Cartridge" . DIRECTORY_SEPARATOR . "delete_cartridge",['result' => $cartridge]), 200);
         }

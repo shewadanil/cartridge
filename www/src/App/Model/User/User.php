@@ -33,6 +33,12 @@ class User extends ActiveRecordEntity
     {
         return $this->passwordHach;
     }
+    public function getRole(){
+        return $this->role;
+    }
+    public function getName(){
+        return $this->nikname;
+    }
     protected static function getTableName(): string
     {
         return 'user';

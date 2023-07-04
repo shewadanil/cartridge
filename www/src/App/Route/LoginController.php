@@ -36,7 +36,7 @@ class LoginController extends AbstractController
     public function logOut(): Response{
         if (isset($this->user) === true){
             $this->user->logOut();
-            $response = $this->redirect(new RawHtmlView(''), '/?login=false', 302);
+            $response = $this->redirect(new RawHtmlView(''), '/', 302);
         }else{
             $response = $this->redirect(new RawHtmlView(''), '/', 302);
         }
