@@ -1,0 +1,43 @@
+[33m37871d2[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m HEAD@{0}: reset: moving to HEAD~
+[33m357a770[m HEAD@{1}: reset: moving to HEAD~
+[33m86b0b4a[m HEAD@{2}: reset: moving to HEAD~
+[33mc4ad0ae[m[33m ([m[1;31morigin/main[m[33m)[m HEAD@{3}: commit: 4.06
+[33m86b0b4a[m HEAD@{4}: commit: 4.06
+[33m357a770[m HEAD@{5}: commit: 4.06
+[33m37871d2[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m HEAD@{6}: commit: 4.06
+[33mf6b09fc[m HEAD@{7}: commit: Куки чере токен
+[33md7d8a75[m HEAD@{8}: commit: 29.06
+[33m6b93d90[m HEAD@{9}: commit: 28.06
+[33m3b66c5e[m HEAD@{10}: commit: 20.06
+[33m249a271[m HEAD@{11}: commit: 12.06
+[33mf67a921[m HEAD@{12}: commit: 12.06
+[33mb36a5a8[m HEAD@{13}: commit: 12.06
+[33m18d7755[m HEAD@{14}: commit: 15.05
+[33mff92e96[m HEAD@{15}: commit: 15.05
+[33me096643[m HEAD@{16}: commit: 13.05
+[33mc68eb44[m HEAD@{17}: commit: 11.05
+[33m45986bd[m HEAD@{18}: commit: 11.05
+[33mef0bd27[m HEAD@{19}: commit: 11.05
+[33m11b4d17[m HEAD@{20}: merge origin/main: Fast-forward
+[33m0154515[m HEAD@{21}: commit: 2.05
+[33mcfb1fee[m HEAD@{22}: commit: split array
+[33m9bec8f8[m HEAD@{23}: commit: full array
+[33mc24fcc2[m HEAD@{24}: commit: 13.04
+[33m207a9d7[m HEAD@{25}: pull: Fast-forward
+[33me19e377[m HEAD@{26}: commit: 13.04
+[33m803d1d5[m HEAD@{27}: commit: 13.04
+[33ma495d17[m HEAD@{28}: commit: ada1
+[33m6991e8f[m HEAD@{29}: commit: ada1
+[33madc0465[m HEAD@{30}: commit: ada1
+[33me69ba64[m HEAD@{31}: commit: ada1
+[33mbecabca[m HEAD@{32}: commit: ada1
+[33m0d0d869[m HEAD@{33}: commit: ada1
+[33mdcf7b2a[m HEAD@{34}: commit: ada1
+[33mfdd6282[m HEAD@{35}: commit: ada1
+[33m563eae3[m HEAD@{36}: commit: ada1
+[33mb1bdf45[m HEAD@{37}: commit: ada1
+[33m89392eb[m HEAD@{38}: commit: ada
+[33m7cf08c1[m HEAD@{39}: commit: init
+[33me59b452[m HEAD@{40}: commit: init
+[33mb2235f5[m HEAD@{41}: Branch: renamed refs/heads/master to refs/heads/main
+[33mb2235f5[m HEAD@{43}: commit (initial): first commit
