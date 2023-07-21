@@ -1,6 +1,5 @@
 /.env
 /.vscode
-/data/*
 .DS_Store
 /buildtest
 .idea
