@@ -1,8 +1,8 @@
 <?php
 include_once "html_header.php";
 ?>
-<footer class="footer">
-    <div>
+<footer class="footer, container-fluid" >
+    <div class="container-">
         <?php if(empty($user)) :?>
             <a href="login"><button>Войти</button></a>
         <?php else:?>
@@ -11,7 +11,7 @@ include_once "html_header.php";
         <?php endif;?>
     </div>
 </footer>
-<div class="container"">
+<div class="container-fluid">
     <div>
         <?php if(!empty($user) && $user->getRole() === 'admin') :?>
         <a href="new_record">Добавить операцию</a>
