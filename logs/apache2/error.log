@@ -1,0 +1,283 @@
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Mon Jan 23 09:32:15.946468 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Mon Jan 23 09:32:15.946496 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jan 23 09:44:56.059810 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Mon Jan 23 09:45:14.079596 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Mon Jan 23 09:45:14.079624 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jan 23 12:10:41.096406 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Mon Jan 23 12:10:48.701563 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Mon Jan 23 12:10:48.701592 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jan 23 12:12:37.947889 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Mon Jan 23 12:12:42.977798 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Mon Jan 23 12:12:42.977828 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jan 23 12:17:57.280687 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Jan 25 08:27:26.170379 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Wed Jan 25 08:27:26.170418 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jan 25 14:50:52.733225 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Wed Jan 25 14:51:21.162240 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Wed Jan 25 14:51:21.162273 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jan 25 15:00:43.101183 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Wed Jan 25 15:00:49.715398 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Wed Jan 25 15:00:49.715425 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jan 25 15:03:01.133117 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Wed Jan 25 15:03:06.292685 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Wed Jan 25 15:03:06.292723 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jan 25 15:04:30.385207 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Wed Jan 25 15:04:35.466590 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Wed Jan 25 15:04:35.466622 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jan 25 15:05:44.833789 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Wed Jan 25 15:05:51.355977 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Wed Jan 25 15:05:51.356012 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jan 25 15:06:40.065028 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Wed Jan 25 15:07:08.918071 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Wed Jan 25 15:07:08.918101 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jan 25 15:10:29.601134 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.4. Set the 'ServerName' directive globally to suppress this message
+[Wed Jan 25 15:10:39.236878 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Wed Jan 25 15:10:39.236908 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jan 25 15:10:57.313209 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.4. Set the 'ServerName' directive globally to suppress this message
+[Wed Jan 25 15:12:05.574106 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Wed Jan 25 15:12:05.574139 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jan 25 15:16:52.449643 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.4. Set the 'ServerName' directive globally to suppress this message
+[Wed Jan 25 15:20:08.278815 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Wed Jan 25 15:20:08.278846 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jan 25 15:21:09.005515 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Wed Jan 25 15:22:00.000917 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Wed Jan 25 15:22:00.001638 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jan 25 15:52:37.164570 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.4. Set the 'ServerName' directive globally to suppress this message
+[Wed Jan 25 15:52:43.677181 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Wed Jan 25 15:52:43.677217 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jan 25 16:01:24.101260 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Wed Jan 25 16:02:03.084164 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Wed Jan 25 16:02:03.084193 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jan 25 16:30:10.753097 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.3. Set the 'ServerName' directive globally to suppress this message
+[Fri Jan 27 08:41:05.182621 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Fri Jan 27 08:41:05.182648 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Jan 27 08:46:24.188077 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Fri Jan 27 08:46:28.867981 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Fri Jan 27 08:46:28.868009 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Jan 27 13:41:18.137922 2023] [php:error] [pid 17] [client 172.21.0.1:52560] script '/var/www/html/form-php/answer_bd.php.php' not found or unable to stat, referer: http://localhost/index.php
+[Fri Jan 27 13:41:35.413613 2023] [php:error] [pid 18] [client 172.21.0.1:57938] script '/var/www/html/form-php/answer_bd.php.php' not found or unable to stat, referer: http://localhost/index.php
+[Fri Jan 27 14:29:43.023889 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Fri Feb 03 06:33:06.621423 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Fri Feb 03 06:33:06.621450 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Feb 03 11:49:17.998413 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Sun Feb 05 10:22:25.245038 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Sun Feb 05 10:22:25.245066 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Feb 05 10:25:17.773752 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Mon Feb 06 09:55:33.519198 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Mon Feb 06 09:55:33.519232 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Feb 06 10:55:57.772052 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.4. Set the 'ServerName' directive globally to suppress this message
+[Fri Feb 10 05:56:22.275751 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Fri Feb 10 05:56:22.275778 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Feb 10 08:06:44.273979 2023] [php:error] [pid 19] [client 172.21.0.1:41860] script '/var/www/html/index.php' not found or unable to stat, referer: http://localhost/form-php/form.php
+[Fri Feb 10 08:06:50.792093 2023] [php:error] [pid 20] [client 172.21.0.1:52128] script '/var/www/html/index.php' not found or unable to stat, referer: http://localhost/form-php/form.php
+[Fri Feb 10 08:06:52.352927 2023] [php:error] [pid 20] [client 172.21.0.1:52128] script '/var/www/html/index.php' not found or unable to stat, referer: http://localhost/form-php/form.php
+[Fri Feb 10 08:07:13.347788 2023] [php:error] [pid 21] [client 172.21.0.1:36232] script '/var/www/html/index.php' not found or unable to stat, referer: http://localhost/form-php/form.php
+[Fri Feb 10 08:08:10.578881 2023] [php:error] [pid 22] [client 172.21.0.1:49858] script '/var/www/html/index.php' not found or unable to stat, referer: http://localhost/form-php/form.php
+[Fri Feb 10 10:07:09.775649 2023] [autoindex:error] [pid 21] [client 172.21.0.1:58474] AH01276: Cannot serve directory /var/www/html/form-php/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Fri Feb 10 10:07:11.879950 2023] [autoindex:error] [pid 21] [client 172.21.0.1:58474] AH01276: Cannot serve directory /var/www/html/form-php/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Fri Feb 10 15:39:51.280291 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Sat Feb 11 06:03:08.269902 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Sat Feb 11 06:03:08.269929 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sat Feb 11 08:28:39.266411 2023] [php:error] [pid 21] [client 172.21.0.1:39170] script '/var/www/html/check_form.php' not found or unable to stat, referer: http://localhost/form-php/edit_form.php?id=11
+[Sat Feb 11 08:28:45.963946 2023] [php:error] [pid 22] [client 172.21.0.1:54268] script '/var/www/html/check_form.php' not found or unable to stat, referer: http://localhost/form-php/edit_form.php?id=11
+[Sat Feb 11 08:28:47.859024 2023] [php:error] [pid 22] [client 172.21.0.1:54268] script '/var/www/html/form-php/check_form.php' not found or unable to stat, referer: http://localhost/form-php/edit_form.php?id=11
+[Sat Feb 11 08:30:48.076575 2023] [php:error] [pid 18] [client 172.21.0.1:50634] script '/var/www/html/edit_form.php' not found or unable to stat, referer: http://localhost/form-php/edit_form.php?id=11
+[Sat Feb 11 08:31:26.100393 2023] [php:error] [pid 19] [client 172.21.0.1:52610] script '/var/www/html/form-php/index.php' not found or unable to stat, referer: http://localhost/form-php/edit_form.php?id=11
+[Sat Feb 11 09:07:41.459682 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Tue Feb 14 06:53:12.010141 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Tue Feb 14 06:53:12.010174 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 14 12:20:30.628909 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Wed Feb 15 16:55:22.209959 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Wed Feb 15 16:55:22.209989 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Feb 15 17:39:57.074138 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Fri Feb 17 17:08:01.219198 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Fri Feb 17 17:08:01.219238 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Feb 17 19:32:10.280537 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Mon Feb 20 06:22:16.347812 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Mon Feb 20 06:22:16.347852 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Feb 20 11:28:54.507317 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Wed Feb 22 12:01:38.622546 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Wed Feb 22 12:01:38.622580 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Feb 22 15:39:10.928021 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Thu Feb 23 06:32:43.469029 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Thu Feb 23 06:32:43.469056 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Feb 23 11:31:33.832746 2023] [autoindex:error] [pid 18] [client 172.21.0.1:49814] AH01276: Cannot serve directory /var/www/html/form-php/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Thu Feb 23 11:31:36.067805 2023] [autoindex:error] [pid 18] [client 172.21.0.1:49814] AH01276: Cannot serve directory /var/www/html/form-php/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Thu Feb 23 13:30:17.821302 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Thu Feb 23 13:30:22.651504 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Thu Feb 23 13:30:22.651537 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Feb 23 13:48:06.210306 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Mon Feb 27 12:20:12.924118 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Mon Feb 27 12:20:12.924148 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Feb 27 18:40:19.632304 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Feb 27 18:41:08.584148 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Mon Feb 27 18:41:08.584181 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Feb 27 18:42:26.814126 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Tue Feb 28 06:50:32.076321 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Tue Feb 28 06:50:32.076349 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 28 10:27:50.824481 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.4. Set the 'ServerName' directive globally to suppress this message
+[Fri Mar 03 06:35:54.776566 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Fri Mar 03 06:35:54.776597 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Mar 03 14:54:46.818775 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Mon Mar 06 12:25:06.967503 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Mon Mar 06 12:25:06.967533 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Mar 06 12:28:00.517093 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Tue Mar 07 07:25:02.378442 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Tue Mar 07 07:25:02.378473 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Mar 07 11:03:17.759599 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Mar 13 13:14:55.560622 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Mon Mar 13 13:14:55.560660 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Mar 13 13:44:19.291837 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Wed Mar 15 07:41:49.285022 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Wed Mar 15 07:41:49.285058 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Mar 15 08:37:33.064655 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Thu Apr 06 08:15:58.415026 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Thu Apr 06 08:15:58.415060 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Apr 06 08:55:17.630842 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Tue Apr 11 07:44:25.718387 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Tue Apr 11 07:44:25.718415 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Apr 11 15:39:21.777745 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Thu Apr 13 07:58:12.928528 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Thu Apr 13 07:58:12.928558 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Apr 13 14:02:42.949307 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Fri Apr 14 07:38:10.546804 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Fri Apr 14 07:38:10.546833 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Apr 14 08:18:14.439807 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Wed Apr 19 07:15:41.566375 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Wed Apr 19 07:15:41.566401 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Apr 19 15:32:58.590016 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Mon May 01 07:24:45.784319 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Mon May 01 07:24:45.784349 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon May 01 15:48:48.174713 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Tue May 02 07:17:45.618363 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Tue May 02 07:17:45.618394 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue May 02 09:54:03.412602 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.4. Set the 'ServerName' directive globally to suppress this message
+[Tue May 09 08:38:37.500888 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Tue May 09 08:38:37.500917 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed May 10 16:06:23.774806 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.4. Set the 'ServerName' directive globally to suppress this message
+[Thu May 11 08:37:47.474659 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Thu May 11 08:37:47.474688 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu May 11 12:47:57.917842 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Sat May 13 06:13:58.271996 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Sat May 13 06:13:58.272024 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sat May 13 07:42:46.990186 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Mon May 15 10:30:29.963988 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Mon May 15 10:30:29.964016 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon May 15 15:24:24.181620 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Mon Jun 05 08:12:29.136911 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Mon Jun 05 08:12:29.136951 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Jun 06 14:01:08.226287 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Mon Jun 12 06:28:51.160405 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Mon Jun 12 06:28:51.160432 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jun 12 16:23:48.557864 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Wed Jun 14 07:34:08.500016 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Wed Jun 14 07:34:08.500047 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jun 14 14:01:26.008683 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Thu Jun 15 05:58:20.965697 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Thu Jun 15 05:58:20.965725 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Jun 15 14:07:43.060341 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Tue Jun 20 07:29:22.051629 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Tue Jun 20 07:29:22.051660 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Jun 20 10:04:17.337127 2023] [http:error] [pid 17] [client 172.21.0.1:52686] AH02429: Response header name 'Location ' contains invalid characters, aborting request, referer: http://localhost/edit_cartridge
+[Tue Jun 20 10:04:41.017406 2023] [http:error] [pid 18] [client 172.21.0.1:46144] AH02429: Response header name 'Location ' contains invalid characters, aborting request, referer: http://localhost/edit_cartridge
+[Tue Jun 20 10:04:43.241890 2023] [http:error] [pid 19] [client 172.21.0.1:38350] AH02429: Response header name 'Location ' contains invalid characters, aborting request, referer: http://localhost/edit_cartridge
+[Tue Jun 20 10:07:13.851404 2023] [http:error] [pid 18] [client 172.21.0.1:43088] AH02429: Response header name 'Location ' contains invalid characters, aborting request, referer: http://localhost/edit_cartridge
+[Tue Jun 20 13:45:16.048799 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Thu Jun 22 08:38:35.390915 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Thu Jun 22 08:38:35.390943 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Jun 22 12:43:36.550426 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.4. Set the 'ServerName' directive globally to suppress this message
+[Fri Jun 23 08:16:00.304755 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Fri Jun 23 08:16:00.304783 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Jun 23 16:23:45.353739 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.4. Set the 'ServerName' directive globally to suppress this message
+[Wed Jun 28 07:45:55.193977 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Wed Jun 28 07:45:55.194006 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jun 28 13:45:37.455807 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Thu Jun 29 06:32:49.725120 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Thu Jun 29 06:32:49.725148 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Jun 29 15:19:20.913592 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Tue Jul 04 06:43:54.569718 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Tue Jul 04 06:43:54.569751 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Jul 04 11:21:32.861751 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Tue Jul 04 11:53:49.133948 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Tue Jul 04 11:53:49.133978 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Jul 04 13:59:51.235133 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Tue Jul 04 14:00:05.834180 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Tue Jul 04 14:00:05.834213 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Jul 04 14:01:01.348133 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.4. Set the 'ServerName' directive globally to suppress this message
+[Tue Jul 04 14:01:09.717745 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.1.14 OpenSSL/1.1.1n configured -- resuming normal operations
+[Tue Jul 04 14:01:09.717774 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Jul 04 14:37:57.156705 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Tue Jul 04 14:41:37.289299 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.19 OpenSSL/1.1.1n configured -- resuming normal operations
+[Tue Jul 04 14:41:37.289338 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Jul 04 14:41:45.054128 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.4. Set the 'ServerName' directive globally to suppress this message
+[Tue Jul 04 14:41:50.025730 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.19 OpenSSL/1.1.1n configured -- resuming normal operations
+[Tue Jul 04 14:41:50.025762 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Jul 04 14:41:57.235951 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.5. Set the 'ServerName' directive globally to suppress this message
+[Fri Jul 21 07:40:35.254555 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/8.0.19 OpenSSL/1.1.1n configured -- resuming normal operations
+[Fri Jul 21 07:40:35.254586 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
