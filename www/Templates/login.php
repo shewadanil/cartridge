@@ -1,38 +1,24 @@
 <?php
-    /*require "../autoloader.php";
-    $login = $req->post('login');
-    $password = $req->post('password');
-    include 'includ_db.php';
-    $password = md5($password."adafaghha");
-
-    $result = $mysql->query("SELECT * FROM `user` WHERE `login` = '$login' AND `password` = '$password'");
-
-    if ($result->num_rows == 0){
-        echo 'Пользователь не найден <br>';
-        echo '<a href="../../index.php">На главную</a>';
-        exit();
-
-    }
-    $user = $result->fetch_assoc();
-    if($result->num_rows) {
-        setcookie("user", $user['login'], time() + 3600, "/");
-    }
-    $mysql->close();
-    header('Location: /');*/
-?>
-<?php
 include_once "html_header.php";
 ?>
-<div style="text-align: center">
-    <a href="/">На Главную</a>
+<div class="d-flex align-items-center py-4">
+<div class="container form-signin  m-auto">
     <?php if(!empty($error)):?>
-    <div> <?=$error?></div>
+        <div> <?=$error?></div>
     <?php endif?>
+    <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="/">На Главную</a>
     <form action="" method="post">
-        <input type="text" name="login" id="login" placeholder="Логин"><br>
-        <input type="text" name="password" id="password" placeholder="Пароль"><br>
-        <button type="submit">Войти</button>
+        <div class="form-floating">
+            <input type="text" class="form-control" name="login" id="login" placeholder="Логин">
+            <label for="floatingInput">Логин</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" name="password" id="password" placeholder="Пароль">
+            <label for="floatingPassword">Пароль</label>
+        </div>
+        <button class="btn btn-primary w-100 py-2" type="submit">Войти</button>
     </form>
+</div>
 </div>
 <?php
 include_once "html_footer.php"

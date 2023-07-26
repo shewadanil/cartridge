@@ -1,8 +1,8 @@
 <?php
 include_once __DIR__ . "/../html_header.php";
 ?>
-    <a href="/">На Главную</a>
 <div class="container">
+    <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="/">На Главную</a>
     <form action="" method="post">
         <table class="table table-bordered ">
             <tr>
@@ -12,8 +12,8 @@ include_once __DIR__ . "/../html_header.php";
                 <th> <input type="text" name="price" id="price" placeholder="Цена"><br></th>
                 <th><input type="date" name="date" id="date" placeholder="Дата"><br></th>
             </tr>
-            <button type="submit">Отправить</button>
         </table>
+        <button class="btn btn-info rounded-pill px-3" type="submit">Отправить</button>
     </form>
 </div>
 <?php
